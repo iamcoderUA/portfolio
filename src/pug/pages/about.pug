@@ -1,0 +1,28 @@
+extends ../template
+include ../mixins/mixins
+
+block title 
+    title About | Stanislav Mikhniev
+
+block content
+    .wrapper
+        include ../modules/header
+        .content
+            .about
+                .about-left
+                    svg.about-left__svg(viewbox="0 0 1000 150" preserveAspectRatio="none")
+                        polygon(points="0,150 1000,150 1000,0" fill="#efeee9")
+                    .caption
+                        svg.caption__svg
+                            use(xlink:href="img/svg/sprite.min.svg#about_header")
+                    .info
+                        .info__block-capt
+                        .info__photo
+                        .info__capt Кто я
+                        .info__text
+                .about-right
+                    svg.about-right__svg(viewbox="0 0 1000 150" preserveAspectRatio="none")
+                        polygon(points="0,150 1000,150 1000,0" fill="#eeebdf")
+            #map
+                include ../modules/footer
+    script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4f9n65-zMdyKKd9UWo00CLLGekxcE_Zs&callback=initMap")

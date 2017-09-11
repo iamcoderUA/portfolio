@@ -1,0 +1,26 @@
+header.header
+    .socials
+        ul.socials__list
+            +headerSocials("img/svg/sprite.min.svg#vk", "https://vk.com")
+            +headerSocials("img/svg/sprite.min.svg#github", "https://github.com/iamcoderUA")
+            +headerSocials("img/svg/sprite.min.svg#in", "https://github.com/iamcoderUA")
+    .navigation
+        .navigation__but
+            a.navigation__but-link(href="#")
+        ul.navigation__list
+            li.navigation__item
+                a.navigation__link(href="projects.html") Мои работы
+            li.navigation__item
+                a.navigation__link(href="blog.html") Блог
+            li.navigation__item
+                a.navigation__link(href="about.html") Обо мне
+            li.navigation__item
+                a.navigation__link(href="index.html") Авторизация
+    .header-info
+        .header-info__photo
+        .header-info__name Станислав Михнев
+        .header-info__capt Личный сайт Front-end разработчика
+    .next-arrow
+        a.next-arrow__but(href="#")
+            svg.next-arrow__svg
+                use(xlink:href="img/svg/sprite.min.svg#arrow_down")

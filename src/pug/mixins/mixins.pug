@@ -1,0 +1,17 @@
+mixin socials(path, link)
+    li.front-info__item
+        a.front-info__link(href=link target="_blank")
+            svg.front-info__svg
+                use(xlink:href=path)
+
+mixin headerSocials(path, link)
+    li.socials__item
+        a.socials__link(href=link target="_blank")
+            svg.socials__svg
+                use(xlink:href=path)
+
+mixin footSocials(path, link)
+    li.foot-soc__item
+        a.foot-soc__link(href=link target="_blank")
+            svg.foot-soc__svg
+                use(xlink:href=path)

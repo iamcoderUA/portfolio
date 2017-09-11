@@ -1,0 +1,31 @@
+extends ../template
+include ../mixins/mixins
+
+block title 
+    title About | Stanislav Mikhniev
+    
+block content
+    .wrapper
+        section.welcome-block
+            a.welcome-block__button Авторизоваться
+            .welcome-container
+                .welcome-container__front
+                    .front-info
+                        .front-info__photo(style="background-image: url(img/content/ava_index.jpg);")
+                        .front-info__name Cтанислав Михнев
+                        .front-info__capt Личный сайт Front-end разработчика
+                        .front-info__socials
+                            ul.front-info__list
+                                +socials("img/svg/sprite.min.svg#vk", 'https://www.vk.com')
+                                +socials("img/svg/sprite.min.svg#github", 'https://www.vk.com')
+                                +socials("img/svg/sprite.min.svg#in", 'https://www.vk.com')
+                    nav.front-nav
+                        a.front-nav__link(href='projects.html') Мои работы
+                        a.front-nav__link(href='about.html') Обо мне
+                        a.front-nav__link(href='index.html') Блог
+                .welcome-container__back
+            footer.welcome-block__footer
+                .welcome-block__text  © Михнев Станислав | создано с любовью | 2017
+
+
+                
