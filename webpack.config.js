@@ -3,7 +3,12 @@ const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 const PATHS = {
-  source: path.join(__dirname, 'src/js/main.js'),
+  source: {
+    index: path.join(__dirname, 'src/js/index.js'),
+    about: path.join(__dirname, 'src/js/about.js'),
+    projects: path.join(__dirname, 'src/js/projects.js'),
+    blog: path.join(__dirname, 'src/js/blog.js'),
+  },
   mod: path.join(__dirname, 'src/js/modules'),
   build: path.join(__dirname, 'prod/js'),
 };
@@ -12,7 +17,8 @@ const config = {
   entry: PATHS.source,
   output: {
     path: PATHS.build,
-    filename: 'bundle.js',
+    filename: '[name].js',
+    library: '[name]',
   },
   module: {
     rules: [

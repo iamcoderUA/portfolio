@@ -1,6 +1,6 @@
 // colors
 $greenL: #0cb29f;
-$greenD:#098d85; 
+$greenD:#098d85;
 
 // resolutions
 $desktopBig: 1800px;
@@ -23,7 +23,9 @@ $vertical: 320px;
 @import "layout/adjustment.scss";
 
 // sections
+@import "modules/fixed-menu.scss";
 @import "modules/header.scss";
+@import "modules/slider.scss";
 @import "modules/footer.scss";
 // sections
 @import "pages/index.scss";

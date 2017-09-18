@@ -1,3 +1,24 @@
+mixin header(path, name, text)
+    .header-bg
+        img.header-bg__pic(src="../../img/bg/bg_index.jpg", alt="")
+    .socials
+        ul.socials__list
+            +headerSocials("img/svg/sprite.min.svg#vk", "https://vk.com")
+            +headerSocials("img/svg/sprite.min.svg#github", "https://github.com/iamcoderUA")
+            +headerSocials("img/svg/sprite.min.svg#in", "https://github.com/iamcoderUA")
+    .header-name
+        svg.header-name__image
+            use(xlink:href=path)
+    .header-info
+        .header-info__photo(style="background-image: url(img/content/ava_index.jpg);")
+        .header-info__name=name
+        .header-info__capt=text
+    .next-arrow
+        a.next-arrow__but(href="")
+            svg.next-arrow__svg
+                use(xlink:href="img/svg/sprite.min.svg#arrow_down")
+
+
 mixin socials(path, link)
     li.front-info__item
         a.front-info__link(href=link target="_blank")
@@ -10,8 +31,59 @@ mixin headerSocials(path, link)
             svg.socials__svg
                 use(xlink:href=path)
 
-mixin footSocials(path, link)
+mixin blog-menu(title)
+    li.blog-menu__item
+        a=title
+
+mixin blog-info(title, date, text, text2)
+    li.blog-info__item
+        p=title
+        div=date
+        p=text
+        p=text2
+
+mixin map-list(path, link, text, newPage)
+        li.map-list__item
+            a.map-list__link(href=link target=newPage)
+                svg.map-list__icon
+                    use(xlink:href=path)
+                .map-list__text=text
+
+mixin skills-list(skill, title, count)
+        li.skills-list__item
+            .skills-row
+                .skills-row__title= skill
+                ul.skills-row__list
+                    li.skills-row__item
+                    - for (var i = 0; i < count; i++) {  
+                        .skill
+                            svg.skill__circle(viewBox="0 0 110 110")
+                                circle(cx="50%" cy="50%" r="45" fill="none" class="skill__circle-first")
+                                circle(cx="50%" cy="50%" r="45" class="skill__circle-second")
+                            .skill__title= title[i]
+                    - }
+
+mixin footSocials(path, pathBack, link, widthSvg, heightSvg, posX, posY)
     li.foot-soc__item
-        a.foot-soc__link(href=link target="_blank")
-            svg.foot-soc__svg
-                use(xlink:href=path)
+        a.foot-soc__link(href=link target="blank" width="30" height="32")
+            svg.foot-soc__svg(viewBox="-1 -1 52 52")
+                circle(cx="25" cy="25" r="25" class="foot-soc__circle-first")
+                use(xlink:href=pathBack class="foot-soc__hovericon" width="50" height="50")
+                use(x=posX y=posY xlink:href=path class="foot-soc__icon" width=widthSvg height=heightSvg)
+
+mixin portfolioText(caption, technology, linkPath)
+    li.portfolio-slider__text-item
+        .portfolio-slider__text-capt=caption
+        .portfolio-slider__text-tech=technology
+        a.portfolio-text__but(href="#")
+            | Просмотреть сайт
+            svg.portfolio-slider__text-svg
+                use(xlink:href=linkPath)
+
+mixin portfolioLeftSlide(slidePath)
+    li.slide-left__item
+        img.slide-left__img(src=slidePath)
+
+mixin portfolioRightSlide(slidePath)
+    li.slide-right__item
+        img.slide-right__img(src=slidePath)

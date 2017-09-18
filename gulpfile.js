@@ -105,7 +105,7 @@ function scss() {
 }
         
 function scripts() {
-    return gulp.src('src/js/main.js')
+    return gulp.src('src/js/*.js')
         .pipe(plumber())
         .pipe(gulpWebpack(webpackConfig, webpack))
         .pipe(rename({ suffix: '.min' }))

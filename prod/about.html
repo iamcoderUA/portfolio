@@ -8,11 +8,20 @@
 		<meta content="ie=edge,chrome=1" http-equiv="X-UA-compatible">
 		<title>About | Stanislav Mikhniev</title>
 		<link rel="stylesheet" href="css/main.min.css">
-		<script src="js/bundle.min.js" defer></script>
 	</head>
 	<body>
 		<div class="wrapper">
+			<div class="navigation">
+				<div class="navigation__but"><a class="navigation__but-link" href="#"></a></div>
+				<ul class="navigation__list">
+					<li class="navigation__item"><a class="navigation__link" href="projects.html">Мои работы</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="blog.html">Блог</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="about.html">Обо мне</a></li>
+					<li class="navigation__item"><a class="navigation__link" href="index.html">Авторизация</a></li>
+				</ul>
+			</div>
 			<header class="header">
+				<div class="header-bg"><img class="header-bg__pic" src="../../img/bg/bg_index.jpg" alt=""/></div>
 				<div class="socials">
 					<ul class="socials__list">
 						<li class="socials__item"><a class="socials__link" href="https://vk.com" target="_blank">
@@ -29,86 +38,230 @@
 								</svg></a></li>
 					</ul>
 				</div>
-				<div class="navigation">
-					<div class="navigation__but"><a class="navigation__but-link" href="#"></a></div>
-					<ul class="navigation__list">
-						<li class="navigation__item"><a class="navigation__link" href="projects.html">Мои работы</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="blog.html">Блог</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="about.html">Обо мне</a></li>
-						<li class="navigation__item"><a class="navigation__link" href="index.html">Авторизация</a></li>
-					</ul>
+				<div class="header-name">
+					<svg class="header-name__image">
+						<use xlink:href="img/svg/sprite.min.svg#portfolio_header"></use>
+					</svg>
 				</div>
 				<div class="header-info">
-					<div class="header-info__photo"></div>
+					<div class="header-info__photo" style="background-image: url(img/content/ava_index.jpg);"></div>
 					<div class="header-info__name">Станислав Михнев</div>
 					<div class="header-info__capt">Личный сайт Front-end разработчика</div>
 				</div>
-				<div class="next-arrow"><a class="next-arrow__but" href="#">
+				<div class="next-arrow"><a class="next-arrow__but" href="">
 						<svg class="next-arrow__svg">
 							<use xlink:href="img/svg/sprite.min.svg#arrow_down"></use>
 						</svg></a></div>
 			</header>
-			<div class="content">
-				<div class="about">
+			<main class="content">
+				<section class="about">
 					<div class="about-left">
-						<svg class="about-left__svg" viewbox="0 0 1000 150" preserveAspectRatio="none">
-							<polygon points="0,150 1000,150 1000,0" fill="#efeee9"></polygon>
+						<svg class="left-svg" viewbox="0 0 1000 175" preserveAspectRatio="none">
+							<polygon points="0,175 1000,175 1000,0" fill="#efeee9"></polygon>
 						</svg>
-						<div class="caption">
-							<svg class="caption__svg">
+						<div class="left-caption">
+							<svg class="left-caption__svg">
 								<use xlink:href="img/svg/sprite.min.svg#about_header"></use>
 							</svg>
 						</div>
-						<div class="info">
-							<div class="info__block-capt"></div>
-							<div class="info__photo"></div>
-							<div class="info__capt">Кто я</div>
-							<div class="info__text"></div>
+						<div class="left-info">
+							<h1 class="left-info__description title-main">Обо мне</h1>
+							<div class="left-info__photo" style="background-image: url(img/content/ava_about.jpg);"></div>
+							<h2 class="left-info__caption">Кто я</h2>
+							<div class="left-info__text">
+								<p>Я веб разработчик из г. Запорожья. Мне 29 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
+								<p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
+							</div>
 						</div>
 					</div>
 					<div class="about-right">
-						<svg class="about-right__svg" viewbox="0 0 1000 150" preserveAspectRatio="none">
-							<polygon points="0,150 1000,150 1000,0" fill="#eeebdf"></polygon>
+						<svg class="right-svg" viewbox="0 0 1000 175" preserveAspectRatio="none">
+							<polygon points="0,175 1000,175 1000,0" fill="#eeebdf"></polygon>
 						</svg>
+						<div class="right-info">
+							<h2 class="right-info__description">Чем я могу быть вам полезен</h2>
+							<div class="right-info__text">
+								<p>Больше всего меня привлекает Front-end разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
+							</div>
+							<div class="right-info__content">
+								<ul class="skills-list">
+									<li class="skills-list__item">
+										<div class="skills-row">
+											<div class="skills-row__title">Front-end</div>
+											<ul class="skills-row__list">
+												<li class="skills-row__item"></li>
+												<div class="skill">
+													<svg class="skill__circle" viewBox="0 0 110 110">
+														<circle class="skill__circle-first" cx="50%" cy="50%" r="45" fill="none"></circle>
+														<circle class="skill__circle-second" cx="50%" cy="50%" r="45"></circle>
+													</svg>
+													<div class="skill__title">HTML5</div>
+												</div>
+												<div class="skill">
+													<svg class="skill__circle" viewBox="0 0 110 110">
+														<circle class="skill__circle-first" cx="50%" cy="50%" r="45" fill="none"></circle>
+														<circle class="skill__circle-second" cx="50%" cy="50%" r="45"></circle>
+													</svg>
+													<div class="skill__title">CSS3</div>
+												</div>
+												<div class="skill">
+													<svg class="skill__circle" viewBox="0 0 110 110">
+														<circle class="skill__circle-first" cx="50%" cy="50%" r="45" fill="none"></circle>
+														<circle class="skill__circle-second" cx="50%" cy="50%" r="45"></circle>
+													</svg>
+													<div class="skill__title">JavaScript &amp; jQuery</div>
+												</div>
+											</ul>
+										</div>
+									</li>
+									<li class="skills-list__item">
+										<div class="skills-row">
+											<div class="skills-row__title">Back-end</div>
+											<ul class="skills-row__list">
+												<li class="skills-row__item"></li>
+												<div class="skill">
+													<svg class="skill__circle" viewBox="0 0 110 110">
+														<circle class="skill__circle-first" cx="50%" cy="50%" r="45" fill="none"></circle>
+														<circle class="skill__circle-second" cx="50%" cy="50%" r="45"></circle>
+													</svg>
+													<div class="skill__title">PHP</div>
+												</div>
+												<div class="skill">
+													<svg class="skill__circle" viewBox="0 0 110 110">
+														<circle class="skill__circle-first" cx="50%" cy="50%" r="45" fill="none"></circle>
+														<circle class="skill__circle-second" cx="50%" cy="50%" r="45"></circle>
+													</svg>
+													<div class="skill__title">mySQL</div>
+												</div>
+												<div class="skill">
+													<svg class="skill__circle" viewBox="0 0 110 110">
+														<circle class="skill__circle-first" cx="50%" cy="50%" r="45" fill="none"></circle>
+														<circle class="skill__circle-second" cx="50%" cy="50%" r="45"></circle>
+													</svg>
+													<div class="skill__title">Node.js &amp; npm</div>
+												</div>
+												<div class="skill">
+													<svg class="skill__circle" viewBox="0 0 110 110">
+														<circle class="skill__circle-first" cx="50%" cy="50%" r="45" fill="none"></circle>
+														<circle class="skill__circle-second" cx="50%" cy="50%" r="45"></circle>
+													</svg>
+													<div class="skill__title">Mongo.db</div>
+												</div>
+											</ul>
+										</div>
+									</li>
+									<li class="skills-list__item">
+										<div class="skills-row">
+											<div class="skills-row__title">WorkFlow</div>
+											<ul class="skills-row__list">
+												<li class="skills-row__item"></li>
+												<div class="skill">
+													<svg class="skill__circle" viewBox="0 0 110 110">
+														<circle class="skill__circle-first" cx="50%" cy="50%" r="45" fill="none"></circle>
+														<circle class="skill__circle-second" cx="50%" cy="50%" r="45"></circle>
+													</svg>
+													<div class="skill__title">Git</div>
+												</div>
+												<div class="skill">
+													<svg class="skill__circle" viewBox="0 0 110 110">
+														<circle class="skill__circle-first" cx="50%" cy="50%" r="45" fill="none"></circle>
+														<circle class="skill__circle-second" cx="50%" cy="50%" r="45"></circle>
+													</svg>
+													<div class="skill__title">Gulp</div>
+												</div>
+												<div class="skill">
+													<svg class="skill__circle" viewBox="0 0 110 110">
+														<circle class="skill__circle-first" cx="50%" cy="50%" r="45" fill="none"></circle>
+														<circle class="skill__circle-second" cx="50%" cy="50%" r="45"></circle>
+													</svg>
+													<div class="skill__title">WebPack</div>
+												</div>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="google-map">
+					<div id="map"></div>
+					<div class="map-container">
+						<div class="map-info">
+							<div class="map-title">Контакты</div>
+							<ul class="map-list">
+								<li class="map-list__item"><a class="map-list__link" href="skype:">
+										<svg class="map-list__icon">
+											<use xlink:href="img/svg/sprite.min.svg#skype"></use>
+										</svg>
+										<div class="map-list__text">stanislav-mikhnev</div></a></li>
+								<li class="map-list__item"><a class="map-list__link" href="mailto:">
+										<svg class="map-list__icon">
+											<use xlink:href="img/svg/sprite.min.svg#envelope"></use>
+										</svg>
+										<div class="map-list__text">stanislav.mikhniev@gmail.com</div></a></li>
+								<li class="map-list__item"><a class="map-list__link" href="tel:380990422243">
+										<svg class="map-list__icon">
+											<use xlink:href="img/svg/sprite.min.svg#phone"></use>
+										</svg>
+										<div class="map-list__text">+38 099 042 22 43</div></a></li>
+								<li class="map-list__item"><a class="map-list__link" href="http://www.google.com.ua" target="_blank">
+										<svg class="map-list__icon">
+											<use xlink:href="img/svg/sprite.min.svg#map_marker"></use>
+										</svg>
+										<div class="map-list__text">Украина, г.Запорожье, бул.Шевченко, 11</div></a></li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer-top">
+					<nav class="foot-nav">
+						<ul class="foot-nav__list">
+							<li class="foot-nav__item"><a class="foot-nav__link" href="projects.html">Мои работы
+									<div class="foot-nav__link-box"></div></a></li>
+							<li class="foot-nav__item"><a class="foot-nav__link" href="about.html">Обо мне
+									<div class="foot-nav__link-box"></div></a></li>
+							<li class="foot-nav__item"><a class="foot-nav__link" href="blog.html">Блог
+									<div class="foot-nav__link-box">                       </div></a></li>
+							<li class="foot-nav__item"><a class="foot-nav__link" href="index.html">Авторизация
+									<div class="foot-nav__link-box">                   </div></a></li>
+						</ul>
+					</nav>
+					<div class="foot-socials">
+						<ul class="foot-soc__list">
+							<li class="foot-soc__item"><a class="foot-soc__link" href="https://vk.com" target="blank" width="30" height="32">
+									<svg class="foot-soc__svg" viewBox="-1 -1 52 52">
+										<circle class="foot-soc__circle-first" cx="25" cy="25" r="25"></circle>
+										<use class="foot-soc__hovericon" xlink:href="img/svg/sprite.min.svg#vk_round" width="50" height="50"></use>
+										<use class="foot-soc__icon" x="10" y="10" xlink:href="img/svg/sprite.min.svg#vk" width="30" height="30"></use>
+									</svg></a></li>
+							<li class="foot-soc__item"><a class="foot-soc__link" href="https://github.com/iamcoderUA" target="blank" width="30" height="32">
+									<svg class="foot-soc__svg" viewBox="-1 -1 52 52">
+										<circle class="foot-soc__circle-first" cx="25" cy="25" r="25"></circle>
+										<use class="foot-soc__hovericon" xlink:href="img/svg/sprite.min.svg#github_round" width="50" height="50"></use>
+										<use class="foot-soc__icon" x="12" y="12" xlink:href="img/svg/sprite.min.svg#github" width="26" height="26"></use>
+									</svg></a></li>
+							<li class="foot-soc__item"><a class="foot-soc__link" href="https://github.com/iamcoderUA" target="blank" width="30" height="32">
+									<svg class="foot-soc__svg" viewBox="-1 -1 52 52">
+										<circle class="foot-soc__circle-first" cx="25" cy="25" r="25"></circle>
+										<use class="foot-soc__hovericon" xlink:href="img/svg/sprite.min.svg#in_round" width="50" height="50"></use>
+										<use class="foot-soc__icon" x="14" y="10" xlink:href="img/svg/sprite.min.svg#in" width="24" height="24"></use>
+									</svg></a></li>
+						</ul>
 					</div>
 				</div>
-				<div id="map">
-					<footer class="footer">
-						<div class="footer-top">
-							<div class="foot-nav">
-								<ul class="foot-nav__list">
-									<li class="foot-nav__item"><a class="foot-nav__link" href="#">Мои работы</a></li>
-									<li class="foot-nav__item"><a class="foot-nav__link" href="#">Обо мне</a></li>
-									<li class="foot-nav__item"><a class="foot-nav__link" href="#">Блог</a></li>
-									<li class="foot-nav__item"><a class="foot-nav__link" href="#">Авторизация</a></li>
-								</ul>
-							</div>
-							<div class="foot-soc">
-								<ul class="foot-soc__list">
-									<li class="foot-soc__item"><a class="foot-soc__link" href="https://vk.com" target="_blank">
-											<svg class="foot-soc__svg">
-												<use xlink:href="img/svg/sprite.min.svg#vk_round"></use>
-											</svg></a></li>
-									<li class="foot-soc__item"><a class="foot-soc__link" href="https://github.com/iamcoderUA" target="_blank">
-											<svg class="foot-soc__svg">
-												<use xlink:href="img/svg/sprite.min.svg#github_round"></use>
-											</svg></a></li>
-									<li class="foot-soc__item"><a class="foot-soc__link" href="https://github.com/iamcoderUA" target="_blank">
-											<svg class="foot-soc__svg">
-												<use xlink:href="img/svg/sprite.min.svg#in_round"></use>
-											</svg></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="footer-bottom">
-							<div class="foot-info">Я веб-разработчик из г. Запорожья, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
-							<div class="foot-copyrite">© Станислав Михнев | создано с любовью | 2017</div>
-						</div>
-					</footer>
+				<div class="footer-bottom">
+					<div class="foot-info">Я веб-разработчик из г. Запорожья, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
+					<div class="foot-copyright">© Станислав Михнев | создано с любовью | 2017</div>
 				</div>
-			</div>
+			</footer>
 		</div>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4f9n65-zMdyKKd9UWo00CLLGekxcE_Zs&amp;callback=initMap"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4f9n65-zMdyKKd9UWo00CLLGekxcE_Zs&amp;callback=initMap" async defer> </script>
+		<script src="js/about.min.js"></script>
+		<script src="js/map.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4f9n65-zMdyKKd9UWo00CLLGekxcE_Zs&amp;callback=initMap"></script>
 	</body>
 </html>

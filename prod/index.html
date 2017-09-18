@@ -8,11 +8,11 @@
 		<meta content="ie=edge,chrome=1" http-equiv="X-UA-compatible">
 		<title>About | Stanislav Mikhniev</title>
 		<link rel="stylesheet" href="css/main.min.css">
-		<script src="js/bundle.min.js" defer></script>
 	</head>
 	<body>
 		<div class="wrapper">
-			<section class="welcome-block"><a class="welcome-block__button">Авторизоваться</a>
+			<section class="welcome-block">
+				<div class="welcome-block__button"><a class="welcome-block__link">Авторизоваться</a></div>
 				<div class="welcome-container">
 					<div class="welcome-container__front">
 						<div class="front-info">
@@ -36,15 +36,75 @@
 								</ul>
 							</div>
 						</div>
-						<nav class="front-nav"><a class="front-nav__link" href="projects.html">Мои работы</a><a class="front-nav__link" href="about.html">Обо мне</a><a class="front-nav__link" href="index.html">Блог</a></nav>
+						<nav class="front-nav">
+							<ul class="front-nav__list">
+								<li class="front-nav__item"><a class="front-nav__link" href="projects.html">Мои работы</a></li>
+								<li class="front-nav__item"><a class="front-nav__link" href="about.html">Обо мне</a></li>
+								<li class="front-nav__item">                           <a class="front-nav__link" href="blog.html">Блог</a></li>
+							</ul>
+						</nav>
 					</div>
-					<div class="welcome-container__back"></div>
+					<div class="welcome-container__back">
+						<div class="welcome-auth__capt">авторизуйтесь</div>
+						<form class="welcome-auth__form" method="post">
+							<div class="welcome-auth__row">
+								<div class="welcome-auth__input-img">
+									<svg class="welcome-auth__svg">
+										<use xlink:href="img/svg/sprite.min.svg#login"></use>
+									</svg>
+								</div>
+								<input class="welcome-auth__input" type="text" placeholder="Логин" name="login">
+							</div>
+							<div class="welcome-auth__row">
+								<div class="welcome-auth__input-img">
+									<svg class="welcome-auth__svg">
+										<use xlink:href="img/svg/sprite.min.svg#password"></use>
+									</svg>
+								</div>
+								<input class="welcome-auth__input" type="password" placeholder="Пароль" name="pass">
+							</div>
+							<div class="welcome-auth__row">
+								<label class="welcome-auth__label">
+									<input class="welcome-auth__checkbox" type="checkbox" value="yes">
+									<div class="welcome-auth__shadow-check">
+										<svg class="welcome-auth__shadow-svg">
+											<use xlink:href="img/svg/sprite.min.svg#check"></use>
+										</svg>
+									</div>
+									<div class="welcome-auth__shadow-checkbox">Я человек</div>
+								</label>
+							</div>
+							<div class="welcome-auth__radio-row">
+								<div class="welcome-auth__radio-capt">Вы точно не робот?</div>
+								<div class="welcome-auth__radio-content">
+									<div class="welcome-auth__radio-container">
+										<label class="welcome-auth__label-radio">
+											<input class="welcome-auth__radio" type="radio" name="value" value="yes">
+											<div class="welcome-auth__shadow-radio">Да</div>
+										</label>
+									</div>
+									<div class="welcome-auth__radio-container">
+										<label class="welcome-auth__label-radio">
+											<input class="welcome-auth__radio" type="radio" name="value" value="yes">
+											<div class="welcome-auth__shadow-radio">Не уверен</div>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="welcome-auth__but">
+								<input class="welcome-auth__homelink" type="reset" value="На главную">
+								<input class="welcome-auth__submit" type="submit" value="Войти">
+							</div>
+						</form>
+					</div>
 				</div>
 				<footer class="welcome-block__footer">
 					<div class="welcome-block__text"> © Михнев Станислав | создано с любовью | 2017</div>
 				</footer>
 			</section>
 		</div>
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4f9n65-zMdyKKd9UWo00CLLGekxcE_Zs&amp;callback=initMap" async defer> </script>
+		<script src="js/index.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4f9n65-zMdyKKd9UWo00CLLGekxcE_Zs&amp;callback=initMap"></script>
 	</body>
 </html>

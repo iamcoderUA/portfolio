@@ -1,78 +1,274 @@
-#slides{
+.portfolio-capt {
+    background-color: #faf8f0;
+  }
+  
+.portfolio-capt {
     position: relative;
-    height: 300px;
-    padding: 0px;
-    margin: 0px;
-    list-style-type: none;
+    padding-bottom: rem(35px);
+    display: flex;
+    justify-content: center;
+
+    @include phones {
+      padding-bottom: 0;
+      height: 95px;
+    }
 }
-.slide{
+  
+  .portfolio-capt__svg {
+    fill: rgba(0,0,0, .07);
+    max-height: 180px;
+    max-width: 500px;
+    width: 100%;
+    @include phones() {
+      position: relative;
+      bottom: 15px;
+      max-width: rem(260px);
+    }
+  }
+  
+  .portfolio-capt__text {
     position: absolute;
-    left: 0px;
-    top: 0px;
+    top: 30%;
+    font-family: "Bernier";
+    font-size: rem(63px);
+    display: block;
+    color: #373e42;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 44%;
+      left: -45px;
+      display: block;
+      width: rem(22px);
+      height: rem(5px);
+      background-color: rgba(0,0,0, .2);
+    }
+    &:after {
+      @extend .portfolio-capt__text:before;
+      left: initial;
+      right: rem(-45px);
+    }
+    @include phones() {
+      font-size: rem(35px);
+      top: 22%;
+      left: 80px;
+    }
+  }
+  
+  .portfolio-body {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    background-color: #fff;
+
+    @include tablets() {
+      flex-direction: column;
+      height: inherit;
+    }
+  }
+
+  .portfolio-slider__text {
+    width: 50%;
+    height: 100%;
+    background-color: #f0efe9;
+    @include tablets() {
+      order: 1;
+      width: 100%;
+      padding: rem(40px) rem(4px) rem(60px) rem(4px);
+    }
+  }
+  
+  .portfolio-slider__text-list {
     width: 100%;
     height: 100%;
-    opacity: 0;
-    z-index: 1;
-    transition: opacity 1s;
-}
-.showing{
-    opacity: 1;
-    z-index: 2;
-}
-.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .portfolio-slider__text-item {
     display: none;
-}
-
-.slide{
-    font-size: 40px;
-    padding: 40px;
-    box-sizing: border-box;
-    background: #333;
-    color: #fff;
-    background-size: cover;
-}
-
-/* http://unrestrictedstock.com/wp-content/uploads/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg */
-.slide:nth-of-type(1){
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/snowy-winter-vignette-bokeh-night-snow-falling-free-stock-photo.jpg');
-}
-
-/* http://www.dawghousedesignstudio.com/wp-content/uploads/2010/01/25/free-stock-photos-1.jpg */
-.slide:nth-of-type(2){
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/free-stock-photos-1.jpg');
-}
-
-/* http://www.stockfreeimages.com/static/homepage/waterfall-free-stock-photo-244915.jpg */
-.slide:nth-of-type(3){
-    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/waterfall-free-stock-photo-244915.jpg');
-}
-
-.controls{
-    background: #333;
-    color: #fff;
-    border: none;
-    padding: 20px 0px;
-    font-size: 20px;
-    cursor: pointer;
-    border: 2px solid #fff;
-    margin: 10px 0px 0px 10px;
-    width: 70px;
-}
-
-.controls:hover,
-.controls:focus{
-    background: #eee;
-    color: #333;
-}
-
-.container{
+    text-align: center;
+    &:first-child {
+      display: block;
+    }
+  }
+  
+  .portfolio-slider__text-capt {
+    display: block;
+    max-width: rem(300px);
+    margin: 0 auto;
+    margin-bottom: rem(38px);
+    font-family: "Bernier";
+    font-size: rem(35px);
+    text-align: center;
+    color: #455a64;
+  }
+  
+  .portfolio-slider__text-tech {
+    margin-bottom: rem(40px);
+    padding: rem(18px) rem(100px);
+    font-family: "Roboto-Regular";
+    font-weight: 500;
+    font-size: rem(16px);
+    text-transform: uppercase;
+    color: #20b5a1;
+    border: 1px solid #00bfa5;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+  }
+  
+  .portfolio-text__but {
     position: relative;
-}
-
-.buttons{
+    display: inline-block;
+    padding: rem(13px) rem(18px) rem(13px) rem(48px);
+    background-color: #00bfa5;
+    border-radius: rem(5px);
+    font-family: "Roboto-Regular";
+    font-weight: 500;
+    font-size: rem(16px);
+    color: #fff;
+  }
+  
+  .portfolio-slider__text-svg {
     position: absolute;
-    left: 0px;
-    top: 0px;
-    z-index: 10;
-    font-size: 0px;
-}
+    top: 10px;
+    left: 13px;
+    width: rem(20px);
+    height: rem(20px);
+    fill: #fff;
+  }
+  
+
+  .portfolio-slider {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+    max-height: 100%;
+    background-color: #efebe0;
+    @include tablets() {
+      width: 100%;
+      flex-wrap: nowrap;
+    }
+  }
+  
+  .portfolio-slider__head {
+    width: 50%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    @include tablets() {
+      order: 0;
+      height: 40%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  
+  .portfolio-slider__head-box {
+    padding: rem(30px);
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .portfolio-slider__head-img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .portfolio-slider__slides {
+    display: flex;
+    width: 50%;
+    height: 30%;
+    @include tablets() {
+      order: 2;
+      width: 100%;
+    }
+  }
+  
+  .slide-left {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    @include tablets() {
+      max-height: rem(225px);
+    }
+  }
+  
+  .slide-left__nav {
+    position: absolute;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.1);
+    transition: 1s;
+    &:hover {
+      background-color: rgba(0,0,0,0.5);
+      transition: 1s;
+    }
+    &:hover .slide-left__svg {
+      fill: rgba(255,255,255,1);
+    }
+  }
+  
+  .slide-left__svg {
+    width: rem(25px);
+    height: rem(25px);
+    fill: rgba(255,255,255, .5);
+  }
+  
+  .slide-left__list {
+    width: 100%;
+    height: 100%;
+    display: block;
+    flex-direction: column;
+  }
+  
+  .slide-left__item {
+    width: 100%;
+    height: 100%;
+    transform: translateY(-100%);
+    @include tablets() {
+      height: 225px;
+    }
+  }
+  
+  .slide-left__img {
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .slide-right {
+    @extend  .slide-left;
+    &__item {
+      @extend  .slide-left__item;
+    }
+    &__img {
+      @extend  .slide-left__img;
+    }
+    &__list {
+      @extend .slide-left__list;
+      flex-direction: column-reverse;
+    }
+    &__nav {
+      @extend .slide-left__nav;
+    }
+    &__svg {
+      @extend .slide-left__svg;
+    }
+  }
+  
+  

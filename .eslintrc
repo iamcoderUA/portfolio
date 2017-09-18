@@ -6,6 +6,6 @@
     "extends": "airbnb-base",
     "rules": {
       "no-console": ["error", { "allow": ["warn", "error"] }],
-      "linebreak-style": 0,
+      "linebreak-style": 0
     }
 }

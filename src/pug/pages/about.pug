@@ -6,23 +6,47 @@ block title
 
 block content
     .wrapper
-        include ../modules/header
-        .content
-            .about
+        include ../modules/fixed-menu
+        header.header
+            +header("img/svg/sprite.min.svg#portfolio_header", "Станислав Михнев", "Личный сайт Front-end разработчика")
+        main.content
+            section.about
                 .about-left
-                    svg.about-left__svg(viewbox="0 0 1000 150" preserveAspectRatio="none")
-                        polygon(points="0,150 1000,150 1000,0" fill="#efeee9")
-                    .caption
-                        svg.caption__svg
+                    svg.left-svg(viewbox="0 0 1000 175" preserveAspectRatio="none")
+                        polygon(points="0,175 1000,175 1000,0" fill="#efeee9")
+                    .left-caption
+                        svg.left-caption__svg
                             use(xlink:href="img/svg/sprite.min.svg#about_header")
-                    .info
-                        .info__block-capt
-                        .info__photo
-                        .info__capt Кто я
-                        .info__text
+                    .left-info
+                        h1.left-info__description.title-main Обо мне
+                        .left-info__photo(style="background-image: url(img/content/ava_about.jpg);")
+                        h2.left-info__caption Кто я
+                        .left-info__text
+                            p Я веб разработчик из г. Запорожья. Мне 29 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
                 .about-right
-                    svg.about-right__svg(viewbox="0 0 1000 150" preserveAspectRatio="none")
-                        polygon(points="0,150 1000,150 1000,0" fill="#eeebdf")
-            #map
-                include ../modules/footer
+                    svg.right-svg(viewbox="0 0 1000 175" preserveAspectRatio="none")
+                        polygon(points="0,175 1000,175 1000,0" fill="#eeebdf")
+                    .right-info
+                        h2.right-info__description Чем я могу быть вам полезен
+                        .right-info__text
+                            p Больше всего меня привлекает Front-end разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                        .right-info__content
+                            ul.skills-list
+                              +skills-list("Front-end", ["HTML5", "CSS3", "JavaScript & jQuery"], "3")       
+                              +skills-list("Back-end", ["PHP", "mySQL", "Node.js & npm", "Mongo.db"], "4")       
+                              +skills-list("WorkFlow", ["Git", "Gulp", "WebPack"], "3")       
+            section.google-map
+                #map
+                .map-container
+                    .map-info
+                        .map-title Контакты
+                        ul.map-list
+                            +map-list("img/svg/sprite.min.svg#skype", 'skype:', 'stanislav-mikhnev')       
+                            +map-list("img/svg/sprite.min.svg#envelope", 'mailto:', 'stanislav.mikhniev@gmail.com')        
+                            +map-list("img/svg/sprite.min.svg#phone", 'tel:380990422243', '+38 099 042 22 43') 
+                            +map-list("img/svg/sprite.min.svg#map_marker", 'http://www.google.com.ua','Украина, г.Запорожье, бул.Шевченко, 11', '_blank')
+        include ../modules/footer
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4f9n65-zMdyKKd9UWo00CLLGekxcE_Zs&callback=initMap")
+    script(src='js/about.min.js')
+    script(src='js/map.js')

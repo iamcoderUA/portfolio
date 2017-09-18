@@ -7,7 +7,8 @@ block title
 block content
     .wrapper
         section.welcome-block
-            a.welcome-block__button Авторизоваться
+            .welcome-block__button
+                a.welcome-block__link Авторизоваться
             .welcome-container
                 .welcome-container__front
                     .front-info
@@ -20,12 +21,47 @@ block content
                                 +socials("img/svg/sprite.min.svg#github", 'https://www.vk.com')
                                 +socials("img/svg/sprite.min.svg#in", 'https://www.vk.com')
                     nav.front-nav
-                        a.front-nav__link(href='projects.html') Мои работы
-                        a.front-nav__link(href='about.html') Обо мне
-                        a.front-nav__link(href='index.html') Блог
+                        ul.front-nav__list
+                            li.front-nav__item
+                                a.front-nav__link(href='projects.html') Мои работы
+                            li.front-nav__item
+                                a.front-nav__link(href='about.html') Обо мне
+                            li.front-nav__item                            
+                                a.front-nav__link(href='blog.html') Блог
                 .welcome-container__back
+                    .welcome-auth__capt авторизуйтесь
+                    form.welcome-auth__form(method="post")
+                        .welcome-auth__row
+                            .welcome-auth__input-img
+                                svg.welcome-auth__svg
+                                    use(xlink:href="img/svg/sprite.min.svg#login")
+                            input.welcome-auth__input(type="text" placeholder="Логин" name="login")
+                        .welcome-auth__row
+                            .welcome-auth__input-img
+                                svg.welcome-auth__svg
+                                    use(xlink:href="img/svg/sprite.min.svg#password")
+                            input.welcome-auth__input(type="password" placeholder="Пароль" name="pass")
+                        .welcome-auth__row
+                            label.welcome-auth__label
+                                input.welcome-auth__checkbox(type="checkbox" value="yes")
+                                .welcome-auth__shadow-check
+                                    svg.welcome-auth__shadow-svg
+                                        use(xlink:href="img/svg/sprite.min.svg#check")
+                                .welcome-auth__shadow-checkbox Я человек
+                        .welcome-auth__radio-row
+                            .welcome-auth__radio-capt Вы точно не робот?
+                            .welcome-auth__radio-content
+                                .welcome-auth__radio-container
+                                    label.welcome-auth__label-radio
+                                        input.welcome-auth__radio(type="radio" name="value" value="yes")
+                                        .welcome-auth__shadow-radio Да
+                                .welcome-auth__radio-container
+                                    label.welcome-auth__label-radio
+                                        input.welcome-auth__radio(type="radio" name="value" value="yes")
+                                        .welcome-auth__shadow-radio Не уверен
+                        .welcome-auth__but
+                            input.welcome-auth__homelink(type="reset" value="На главную")
+                            input.welcome-auth__submit(type="submit" value="Войти")
             footer.welcome-block__footer
                 .welcome-block__text  © Михнев Станислав | создано с любовью | 2017
-
-
-                
+    script(src='js/index.min.js')
