@@ -10,6 +10,7 @@
     left: 0;
     right: 0;
     height: rem(1500px);
+    z-index: 0;
     &__pic {
         display: block;
         max-height: 1300px;
@@ -20,9 +21,10 @@
 
 .socials {
     display: inline-block;
-    padding-top: rem(30px);
-    padding-left: rem(31px);    
-    
+    position: absolute;
+    top: rem(30px);
+    left: rem(31px);
+    z-index: 100;
     &__list {
         display: flex;
     }
@@ -33,6 +35,10 @@
     &:first-child {
         margin-left: 0;
     }
+}
+
+.socials__link {
+    display: inline-block;
 }
 
 .socials__svg {

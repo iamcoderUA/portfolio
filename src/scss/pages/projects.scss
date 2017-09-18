@@ -40,7 +40,7 @@
 
 .feed-wrapper {
     width: 100%;
-    min-width: 300px;    
+    min-width: 300px; 
     height: 100%;
     background: url(../img/bg/bg_projects.png) center no-repeat;
     background-size: cover;
@@ -123,25 +123,21 @@
 
 .feed-form {
     position: relative;
-    width: rem(380px);
-    height: rem(458px);
-    display: flex;
-    justify-content: center;
     margin-bottom: 50px;
-    overflow: hidden;      
 }
 
 .feed-form__blur {
-    width: 100%;
-    height: 100%;
+    position: relative;
+    width: rem(380px);
+    height: rem(437px);
     border-radius: 5px;
-    overflow: hidden;
-    
 }
 
 .feed-form__bg {
     background: url(../img/bg/bg_projects.png) center no-repeat;
     background-size: 1200px;
+    top: 0;
+    z-index: -1;
     filter: blur(2.5px);
     width: 100%;
     height: 100%;
@@ -152,9 +148,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    max-height: 100%;
-    padding-top: 20px;
+    // height: 100%;
     border-radius: 10px;
 }
 
@@ -164,6 +158,7 @@
     font-size: rem(35px);
     color: #455a64;
     text-align: center;
+    margin-top: 20px;    
     &:before {
         content: "";
         display: block;
@@ -187,11 +182,6 @@
 }
 
 .form {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     font-family: "Roboto-Light";
     color: #455a64;
 }
@@ -200,9 +190,6 @@
     width: 100%;
     padding: 0 20px;    
     margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 
     &:first-child {
         margin-top: 25px;    
@@ -243,7 +230,6 @@
     font-family: "Roboto-Regular";
     color: #fff;
     border: none;
-    outline: none;
     cursor: pointer;    
     background-color: $greenL;
     border-right: rem(1px) solid #fff;
