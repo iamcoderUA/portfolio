@@ -1,14 +1,12 @@
 import { nav } from './modules/fixed-menu.js';
+import { initMap } from './modules/map.js';
 import { parallax } from './modules/parallax.js';
-// import { initMap } from './modules/map.js';
-
 
 nav.navBut.onclick = function (e) {
     e.preventDefault();
     nav.navActive();
 };
 
-// initMap();
 const wrapper = document.querySelector('body');
 
 wrapper.onscroll = function () {
@@ -16,7 +14,6 @@ wrapper.onscroll = function () {
    parallax.parallaxMove(parallax.portfolio, parallax.portfolio.getBoundingClientRect().top, 25);
    parallax.parallaxMove(parallax.info, parallax.info.getBoundingClientRect().top, 35);
 };
-
 
 $(function($){
 	$('.next-arrow__but').click(function(){
@@ -26,3 +23,5 @@ $(function($){
 		return false;
 	});
 });
+
+initMap();

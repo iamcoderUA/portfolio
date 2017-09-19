@@ -1,4 +1,4 @@
-function initMap() {
+export function initMap() {
     var styledMapType = new google.maps.StyledMapType(
       [
         {
@@ -68,4 +68,4 @@ function initMap() {
     map.setOptions({
       draggable: true, zoomControl: false, scrollwheel: false, disableDoubleClickZoom: false,
     });
-  };
+};

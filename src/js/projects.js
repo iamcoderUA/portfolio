@@ -20,7 +20,7 @@ blur.set();
 
 window.onresize = function() {
     blur.set();
-}
+};
 
 // anchor.btnUp.onclick = function (e) {
 //     e.preventDefault();

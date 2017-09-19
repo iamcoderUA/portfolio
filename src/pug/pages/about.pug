@@ -33,7 +33,7 @@ block content
                             p Больше всего меня привлекает Front-end разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
                         .right-info__content
                             ul.skills-list
-                              +skills-list("Front-end", ["HTML5", "CSS3", "JavaScript & jQuery"], "3")       
+                              +skills-list("Front-end", ["HTML5", "CSS3", "JavaScript & jQuery", "SASS, PUG"], "4")       
                               +skills-list("Back-end", ["PHP", "mySQL", "Node.js & npm", "Mongo.db"], "4")       
                               +skills-list("WorkFlow", ["Git", "Gulp", "WebPack"], "3")       
             section.google-map
@@ -48,6 +48,8 @@ block content
                             +map-list("img/svg/sprite.min.svg#map_marker", 'http://www.google.com.ua','Украина, г.Запорожье, бул.Шевченко, 11', '_blank')
         include ../modules/footer
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    //- script(src='js/map.js')
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4f9n65-zMdyKKd9UWo00CLLGekxcE_Zs&callback=initMap")
     script(src='js/about.min.js')
-    script(src='js/map.js')
+
+    

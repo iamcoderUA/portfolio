@@ -4,23 +4,23 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    padding: 26px 0 15px 0px;    
+    padding: rem(26px) 0 rem(15px) 0px;    
     z-index: 100;
 }
 
 .footer-top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 15px;
-    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    margin-bottom: rem(15px);
+    border-bottom: rem(1px) solid rgba(255, 255, 255, .2);
 }
 
 .footer-top, .footer-bottom {
-    padding: 0 30px;      
+    padding: 0 rem(30px);      
 }    
 
 .foot-nav, .foot-socials {
-    margin-bottom: 5px;
+    margin-bottom: rem(5px);
 }
 
 .foot-nav__item {
@@ -35,7 +35,7 @@
     display: inline-block;
     font-family: "Roboto-Medium";
     color: #fff;
-    border-bottom: 2px solid transparent;
+    border-bottom: rem(2px) solid transparent;
     &:hover .foot-nav__link-box {
         width: 100%;
         transition: .4s;
@@ -57,8 +57,8 @@
 }
 
 .foot-soc__svg {    
-    width: 36px;
-    height: 36px;
+    width: rem(36px);
+    height: rem(36px);
 
     &:hover .foot-soc__hovericon {
         fill: #fff;

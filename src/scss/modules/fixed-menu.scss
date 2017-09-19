@@ -38,15 +38,15 @@
   position: absolute;
   top: rem(28px);
   right: rem(30px);
-  width: 40px;
-  height: 35px;
+  width: rem(40px);
+  height: rem(35px);
   cursor: pointer;
   z-index: 1000;
   &.active {
     & .navigation__but-link {
       transform: rotate(-45deg);
       transition: .5s;
-      top: 15px;
+      top: rem(15px);
     }
     & .navigation__but-link:before {
       top: 0px;
@@ -62,22 +62,22 @@
   position: absolute;
   top: 0;
   display: block;
-  width: 40px;
-  height: 5px;
+  width: rem(40px);
+  height: rem(5px);
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: rem(5px);
   transition: 1s;
   &:before {
     @extend .navigation__but-link;
     content: "";
     position: absolute;
-    top: 30px;
+    top: rem(30px);
   }
   &:after {
     @extend .navigation__but-link;
     content: "";
     position: absolute;
-    top: 15px;
+    top: rem(15px);
     visibility: visible;
     transition: 1s;
   }
@@ -96,7 +96,7 @@
 .navigation__item {
   position: relative;
   display: block;
-  right: -9999px;  
+  right: rem(-9999px);  
   margin-top: rem(70px);
   &:first-child {
     margin-top: 0;
@@ -108,7 +108,7 @@
 
 @keyframes itemanim {
   0% {
-    right: -9999px;
+    right: rem(-9999px);
   }
   100% {
     right: 0;
@@ -126,26 +126,26 @@
     display: block;    
     position: absolute;
     top: 50%;
-    left: -40px;
-    width: 23px;
-    height: 6px;
+    left: rem(-40px);
+    width: rem(23px);
+    height: rem(6px);
     background-color: rgba(255,255,255,0);
   }
   &:after {
     @extend .navigation__link:before;
     left: inherit;
-    right: -40px;
+    right: rem(-40px);
   }
   &.navigation__link--blog {
     &:before {
       @extend .navigation__link:before;
       right: inherit;
-      left: 60px;
+      left: rem(60px);
     }
     &:after {
       @extend .navigation__link:before;
       left: inherit;
-      right: 60px;
+      right: rem(60px);
     }
     &:hover {
       &:before {
@@ -157,12 +157,12 @@
     &:before {
       @extend .navigation__link:before;
       right: inherit;
-      left: 20px;
+      left: rem(20px);
     }
     &:after {
       @extend .navigation__link:before;
       left: inherit;
-      right: 20px;
+      right: rem(20px);
     }
     &:hover {
       &:before {
@@ -174,12 +174,12 @@
     &:before {
       @extend .navigation__link:before;
       right: inherit;
-      left: -40px;
+      left: rem(-40px);
     }
     &:after {
       @extend .navigation__link:before;
       left: inherit;
-      right: -40px;
+      right: rem(-40px);
     }
     &:hover {
       &:before {

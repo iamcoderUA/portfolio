@@ -10,18 +10,18 @@
 
     @include phones {
       padding-bottom: 0;
-      height: 95px;
+      height: rem(95px);
     }
 }
   
   .portfolio-capt__svg {
     fill: rgba(0,0,0, .07);
-    max-height: 180px;
-    max-width: 500px;
+    max-height: rem(180px);
+    max-width: rem(500px);
     width: 100%;
     @include phones() {
       position: relative;
-      bottom: 15px;
+      bottom: rem(15px);
       max-width: rem(260px);
     }
   }
@@ -37,7 +37,7 @@
       content: "";
       position: absolute;
       top: 44%;
-      left: -45px;
+      left: rem(-45px);
       display: block;
       width: rem(22px);
       height: rem(5px);
@@ -51,7 +51,7 @@
     @include phones() {
       font-size: rem(35px);
       top: 22%;
-      left: 80px;
+      left: rem(80px);
     }
   }
   
@@ -243,7 +243,7 @@
     height: 100%;
     transform: translateY(-100%);
     @include tablets() {
-      height: 225px;
+      height: rem(225px);
     }
   }
   
