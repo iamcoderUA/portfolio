@@ -15,7 +15,8 @@ block content
                     polygon(points="0,175 1000,175 1000,0" fill="#faf8f0")
                 svg.right-svg.right-svg_position(viewbox="0 0 1000 175" preserveAspectRatio="none")
                     polygon(points="0,175 1000,175 1000,0" fill="#faf8f0")
-                h1.works-title.title-main Мои работы
+                h1.works-title#up
+                    .title-main Мои работы
                     .works-title__image
                         svg.title-svg
                             use(xlink:href="img/svg/sprite.min.svg#works_header")
@@ -87,8 +88,9 @@ block content
                                     input.form-row__homelink(type="reset" value="Отправить")
                                     input.form-row__submit(type="submit" value="Очистить")
                     .back-arrow
-                        a.next-arrow__but(href="")
+                        a.next-arrow__but(href="#up")
                             svg.next-arrow__svg
                                 use(xlink:href="img/svg/sprite.min.svg#arrow_down")
         include ../modules/footer
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
     script(src='js/projects.min.js')

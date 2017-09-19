@@ -12,7 +12,6 @@
 	<body>
 		<div class="wrapper">
 			<div class="navigation">
-				<div class="navigation__but"><a class="navigation__but-link" href="#"></a></div>
 				<ul class="navigation__list">
 					<li class="navigation__item"><a class="navigation__link" href="projects.html">Мои работы</a></li>
 					<li class="navigation__item"><a class="navigation__link" href="blog.html">Блог</a></li>
@@ -21,10 +20,12 @@
 				</ul>
 			</div>
 			<header class="header">
-				<div class="header-bg"><img class="header-bg__pic" src="img/bg/bg_index.jpg" alt=""/></div>
+				<div class="header-bg">
+					<div class="header-bg__pic"></div>
+				</div>
 				<div class="socials">
 					<ul class="socials__list">
-						<li class="socials__item"><a class="socials__link" href="https://vk.com" target="_blank">
+						<li class="socials__item"><a class="socials__link" href="https://vk.com/id10661167" target="_blank">
 								<svg class="socials__svg">
 									<use xlink:href="img/svg/sprite.min.svg#vk"></use>
 								</svg></a></li>
@@ -38,6 +39,7 @@
 								</svg></a></li>
 					</ul>
 				</div>
+				<div class="navigation__but"><a class="navigation__but-link" href="#"></a></div>
 				<div class="header-name">
 					<svg class="header-name__image">
 						<use xlink:href="img/svg/sprite.min.svg#portfolio_header"></use>
@@ -48,7 +50,7 @@
 					<div class="header-info__name">Станислав Михнев</div>
 					<div class="header-info__capt">Личный сайт Front-end разработчика</div>
 				</div>
-				<div class="next-arrow"><a class="next-arrow__but" href="">
+				<div class="next-arrow"><a class="next-arrow__but" href="#up">
 						<svg class="next-arrow__svg">
 							<use xlink:href="img/svg/sprite.min.svg#arrow_down"></use>
 						</svg></a></div>
@@ -61,7 +63,8 @@
 					<svg class="right-svg right-svg_position" viewbox="0 0 1000 175" preserveAspectRatio="none">
 						<polygon points="0,175 1000,175 1000,0" fill="#faf8f0"></polygon>
 					</svg>
-					<h1 class="works-title title-main">Мои работы
+					<h1 class="works-title" id="up">
+						<div class="title-main">Мои работы</div>
 						<div class="works-title__image">
 							<svg class="title-svg">
 								<use xlink:href="img/svg/sprite.min.svg#works_header"></use>
@@ -179,7 +182,7 @@
 								</form>
 							</div>
 						</div>
-						<div class="back-arrow"><a class="next-arrow__but" href="">
+						<div class="back-arrow"><a class="next-arrow__but" href="#up">
 								<svg class="next-arrow__svg">
 									<use xlink:href="img/svg/sprite.min.svg#arrow_down"></use>
 								</svg></a></div>
@@ -202,7 +205,7 @@
 					</nav>
 					<div class="foot-socials">
 						<ul class="foot-soc__list">
-							<li class="foot-soc__item"><a class="foot-soc__link" href="https://vk.com" target="blank" width="30" height="32">
+							<li class="foot-soc__item"><a class="foot-soc__link" href="https://vk.com/id10661167" target="blank" width="30" height="32">
 									<svg class="foot-soc__svg" viewBox="-1 -1 52 52">
 										<circle class="foot-soc__circle-first" cx="25" cy="25" r="25"></circle>
 										<use class="foot-soc__hovericon" xlink:href="img/svg/sprite.min.svg#vk_round" width="50" height="50"></use>
@@ -229,8 +232,8 @@
 				</div>
 			</footer>
 		</div>
-		<script src="js/projects.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/projects.min.js"></script>
 		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4f9n65-zMdyKKd9UWo00CLLGekxcE_Zs&amp;callback=initMap"></script>
 	</body>
 </html>

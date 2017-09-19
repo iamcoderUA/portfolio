@@ -1,20 +1,22 @@
-mixin header(path, name, text)
+mixin header(path, name, text, className)
     .header-bg
-        img.header-bg__pic(src="img/bg/bg_index.jpg", alt="")
+        .header-bg__pic
     .socials
         ul.socials__list
-            +headerSocials("img/svg/sprite.min.svg#vk", "https://vk.com")
+            +headerSocials("img/svg/sprite.min.svg#vk", "https://vk.com/id10661167")
             +headerSocials("img/svg/sprite.min.svg#github", "https://github.com/iamcoderUA")
             +headerSocials("img/svg/sprite.min.svg#in", "https://github.com/iamcoderUA")
+    .navigation__but
+        a.navigation__but-link(href="#")
     .header-name
         svg.header-name__image
             use(xlink:href=path)
     .header-info
         .header-info__photo(style="background-image: url(img/content/ava_index.jpg);")
-        .header-info__name=name
+        .header-info__name(class=className)=name
         .header-info__capt=text
     .next-arrow
-        a.next-arrow__but(href="")
+        a.next-arrow__but(href="#up")
             svg.next-arrow__svg
                 use(xlink:href="img/svg/sprite.min.svg#arrow_down")
 
@@ -36,7 +38,7 @@ mixin blog-menu(title)
         a=title
 
 mixin blog-info(title, date, text, text2)
-    li.blog-info__item
+    article.blog-info__item
         p=title
         div=date
         p=text

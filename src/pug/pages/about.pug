@@ -28,7 +28,7 @@ block content
                     svg.right-svg(viewbox="0 0 1000 175" preserveAspectRatio="none")
                         polygon(points="0,175 1000,175 1000,0" fill="#eeebdf")
                     .right-info
-                        h2.right-info__description Чем я могу быть вам полезен
+                        h2.right-info__description#up Чем я могу быть вам полезен
                         .right-info__text
                             p Больше всего меня привлекает Front-end разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
                         .right-info__content
@@ -47,6 +47,7 @@ block content
                             +map-list("img/svg/sprite.min.svg#phone", 'tel:380990422243', '+38 099 042 22 43') 
                             +map-list("img/svg/sprite.min.svg#map_marker", 'http://www.google.com.ua','Украина, г.Запорожье, бул.Шевченко, 11', '_blank')
         include ../modules/footer
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4f9n65-zMdyKKd9UWo00CLLGekxcE_Zs&callback=initMap")
     script(src='js/about.min.js')
     script(src='js/map.js')
