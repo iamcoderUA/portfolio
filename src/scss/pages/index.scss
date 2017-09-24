@@ -1,7 +1,6 @@
 .welcome-block {
     width: 100%;
     height: 100vh;
-    min-height: rem(650px);
     background-image: url('../img/bg/bg_index.jpg');
     background-size: cover;
     background-position: center;    
@@ -14,27 +13,30 @@
 }
   
 .welcome-block__button {
-    font-family: "Roboto-Medium";
-    font-size: rem(16px);    
-    color: #fff;
-    padding: rem(10px) rem(30px); 
     margin: rem(25px) 1% 0 0;
-    border: rem(1px) solid #fff;
-    border-radius: rem(5px);
     align-self: flex-end;
     cursor: pointer;
-    transition: all 0.5s;
-    
+
     @include phones() {
         align-self: center;
     }
     @include vertical() {
         align-self: center;
     }
+}
 
+a.welcome-block__link {
+    font-family: "Roboto-Medium";
+    font-size: rem(16px);    
+    color: #fff;
+    padding: rem(10px) rem(30px);    
+    border: rem(1px) solid #fff;
+    border-radius: rem(5px);
+    transition: all 0.5s;
+    
     &:hover {
-        background-color: #fff;
         color: #00bfa5;
+        background-color: #fff;        
         transition: all 0.5s;
     }
 }
@@ -358,7 +360,7 @@
     &:after {
         content: "";
         position: absolute;
-        left: rem(-24px);
+        left: rem(-22px);
         bottom: rem(9px);
         display: none;
         width: rem(8px);
@@ -372,7 +374,7 @@
     display: flex;
     width: 100%;
     margin-top: rem(40px);
-    text-align: center;    
+    text-align: center;
 }
 
 .welcome-auth__homelink {
@@ -384,7 +386,6 @@
     outline: none;
     cursor: pointer;    
     background-color: $greenL;
-    border-right: rem(1px) solid #fff;
     border-bottom-left-radius: rem(5px);    
     transition: background-color 0.3s;   
 
@@ -396,7 +397,7 @@
 
 .welcome-auth__submit {
     @extend .welcome-auth__homelink;    
-    border-right: rem(1px) solid transparent; 
+    border-left: rem(1px) solid #fff;
     border-bottom-left-radius: rem(0px);        
     border-bottom-right-radius: rem(5px); 
 }
