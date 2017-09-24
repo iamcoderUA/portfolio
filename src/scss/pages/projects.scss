@@ -14,6 +14,10 @@
     padding-top: rem(50px);
     margin-bottom: rem(43px);
     position: relative;
+
+    @include vertical() {
+        padding-top: rem(50px);
+    }
 }
 
 .works-title__image {
@@ -24,6 +28,15 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
+
+    @include desktopW {
+        width: rem(450px);    
+        height: rem(350px);
+    }
+    @include vertical() {
+        width: rem(350px);    
+        height: rem(250px);
+    }
 }
 
 .title-svg {
@@ -43,17 +56,30 @@
     flex-direction: column;
     align-items: center;
     padding-top: rem(50px);   
-    padding-bottom: 20%;
     position: relative;
+
+    @include vertical() {
+        padding-top: rem(30px);   
+    }
 }
 
 .feed-title {
     display: inline-block;
-    max-width: rem(400px);
+    max-width: rem(300px);
     text-align: center;
     line-height: rem(64px);
     margin-bottom: rem(50px);
     position: relative;
+
+    @include tablets() {
+        max-width: rem(500px);
+        margin-bottom: rem(30px);    
+    }
+
+    @include vertical() {
+        max-width: rem(200px);
+        margin-bottom: rem(20px);
+    }
 }
 
 .feed-title__image {
@@ -63,53 +89,145 @@
     top: 50%;
     transform: translate(-50%, -50%);
     z-index: 100;
+
+    @include vertical() {
+        width: rem(300px);
+    }
 }
 
-.feed-info__list {
-    max-width: 63%;
+.feed-list {
+    max-width: 50%;
     display: flex;
     justify-content: space-between;
     margin-bottom: rem(50px);
-}
 
-.feed-info__item {
-    margin-right: rem(20px);
-    &:last-child {
-        margin-right: 0;
+    @include desktopW {
+        max-width: 50%;
+    }
+    @include desktop {
+        max-width: 63%;
+    }
+    @include tablets {
+        max-width: 95%;
+    }
+    @include phones() {
+        max-width: 93%;
+    }
+    @include vertical() {
+        max-width: 95%;
+        display: flex;
+        flex-direction: column;
     }
 }
-.feed-info__icon {
-    width: rem(30px);
-    height: rem(30px);
-    margin-bottom: rem(20px);
+
+.feed-list__item {
+    margin-right: rem(20px);
+    max-width: 55%;    
+
+    @include desktopW {
+        max-width: 50%;
+    }
+
+    @include phones() {
+        margin-right: rem(10px);
+    }
+
+    @include vertical() {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-right: 0; 
+        margin-bottom: rem(30px);
+    }
+
+    &:last-child {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
 }
 
-.feed-info__text {
+.feed-list__link {
+    width: 100%;
+    margin-bottom: rem(20px);  
+    
+    @include vertical() {
+        text-align: center;
+    }
+}    
+
+.feed-list__icon {
+    width: rem(30px);
+    height: rem(30px);
+
+    @include vertical() {
+        width: rem(40px);
+        height: rem(40px);
+    }        
+}
+
+.feed-list__text {
     font-family: "Roboto-Medium";
     color: #455a64;
     margin-bottom: rem(20px);
+
+    @include phones() {
+        font-size: rem(14px);
+    }
+    
+    @include vertical() {
+        margin-bottom: rem(10px);
+    }
 }
 
-.feed-info__description {
+.feed-list__description {
     display: flex;
     align-items: center;
 }
 
-.feed-info__photo {
+.feed-list__photo {
     width: rem(100px);
     height: rem(100px);
     border-radius: 50%;    
     margin-right: rem(20px);
     background-position: center top;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
+
+    @include phones(){
+        width: rem(70px);
+        height: rem(70px);
+    }
+    @include vertical(){
+        width: rem(70px);
+        height: rem(70px);
+    }
 }
 
-.feed-info__person {
+.feed-list__pic {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: rem(100px);
+    height: rem(100px);
+    max-width: 100%;
+    border-radius: 50%;
+
+    @include phones(){
+        width: rem(70px);
+        height: rem(70px);
+    }
+
+    @include vertical(){
+        width: rem(70px);
+        height: rem(70px);
+    }
+}
+
+.feed-list__person {
     color: $greenL;
 }
 
-.feed-info__name {
+.feed-list__name {
     font-family: "Roboto-Medium";
 }
 
@@ -119,7 +237,7 @@
     position: relative;
     width: rem(380px);
     height: rem(437px);
-    margin-bottom: 5%;
+    margin-bottom: rem(70px);
 }
 
 .feed-form__blur {
@@ -145,37 +263,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    // height: 100%;
+    height: 100%;
     border-radius: rem(10px);
 }
 
 .feed-form__capt {
-    position: relative;
-    font-family: "Bernier";
-    font-size: rem(35px);
-    color: #455a64;
     text-align: center;
-    margin-top: rem(20px);    
-    &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 50%;
-        left: rem(25px);
-        width: rem(22px);
-        height: rem(5px);
-        background-color: rgba(0, 0, 0, 0.2)
-    }
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: rem(25px);
-        width: rem(22px);
-        height: rem(5px);
-        background-color: rgba(0, 0, 0, 0.2)
-    }
+    margin-top: rem(20px);
 }
 
 .form {
@@ -249,6 +343,7 @@
 .back-arrow {
     display: flex;
     justify-content: center;
+    margin-bottom: rem(70px);
     transform: rotate(180deg);
     bottom: 15%;
     transition: .3s;    

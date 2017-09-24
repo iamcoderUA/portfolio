@@ -2,6 +2,16 @@
     width: 100%;
     min-height: 100vh;
     position: relative;
+
+    @include tablets() {
+        min-height: 78vh;
+    }
+    @include phones() {
+        min-height: 84vh;
+    }
+    @include vertical() {
+        min-height: 97vh;        
+    }
 }
 
 .header-bg {
@@ -34,6 +44,10 @@
 
 .socials__item {
     margin-left: rem(31px);
+
+    @include vertical() {
+        margin-left: rem(20px);
+    }
     &:first-child {
         margin-left: 0;
     }
@@ -89,7 +103,7 @@
     background-size: cover;
     border-radius: 50%;
     background-color: #fff;
-    margin-bottom: rem(20px);    
+    margin-bottom: rem(20px);  
 }
 
 .header-info__name {

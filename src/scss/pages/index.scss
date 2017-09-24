@@ -23,7 +23,14 @@
     border-radius: rem(5px);
     align-self: flex-end;
     cursor: pointer;
-    transition: all 0.5s;    
+    transition: all 0.5s;
+    
+    @include phones() {
+        align-self: center;
+    }
+    @include vertical() {
+        align-self: center;
+    }
 
     &:hover {
         background-color: #fff;
@@ -57,7 +64,11 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    backface-visibility: hidden;    
+    backface-visibility: hidden;
+
+    @include vertical() {
+        width: rem(340px)    
+    }
 }
 
 .front-info {
@@ -170,6 +181,10 @@
     font-family: "Roboto-Light";
     backface-visibility: hidden;
     transform: translate(-50%, -50%) rotateY(180deg);
+
+    @include vertical() {
+        width: rem(340px)    
+    }
 }
 
 .welcome-auth__capt {

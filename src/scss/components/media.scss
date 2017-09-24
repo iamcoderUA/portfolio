@@ -2,8 +2,8 @@
 	@return $px / 16px + 0rem;
 }
 
-@mixin desktopBig {
-	@media screen and (max-width: $desktopBig) {
+@mixin desktopW {
+	@media screen and (max-width: $desktopW) {
 		@content;
 	}
 }

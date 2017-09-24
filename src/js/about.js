@@ -10,7 +10,7 @@ nav.navBut.onclick = function (e) {
 const wrapper = document.querySelector('body');
 
 wrapper.onscroll = function () {
-   parallax.parallaxMove(parallax.bg, parallax.bg.getBoundingClientRect().top, 45);
+   parallax.parallaxMove(parallax.bg, parallax.bg.getBoundingClientRect().top, 75);
    parallax.parallaxMove(parallax.portfolio, parallax.portfolio.getBoundingClientRect().top, 25);
    parallax.parallaxMove(parallax.info, parallax.info.getBoundingClientRect().top, 35);
 };

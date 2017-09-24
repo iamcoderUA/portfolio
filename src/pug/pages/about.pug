@@ -11,27 +11,30 @@ block content
             +header("img/svg/sprite.min.svg#portfolio_header", "Станислав Михнев", "Личный сайт Front-end разработчика")
         main.content
             section.about
-                .about-left
-                    svg.left-svg(viewbox="0 0 1000 175" preserveAspectRatio="none")
-                        polygon(points="0,175 1000,175 1000,0" fill="#efeee9")
-                    .left-caption
-                        svg.left-caption__svg
-                            use(xlink:href="img/svg/sprite.min.svg#about_header")
-                    .left-info
-                        h1.left-info__description.title-main Обо мне
-                        .left-info__photo(style="background-image: url(img/content/ava_about.jpg);")
-                        h2.left-info__caption Кто я
-                        .left-info__text
-                            p Я веб разработчик из г. Запорожья. Мне 29 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
-                .about-right
-                    svg.right-svg(viewbox="0 0 1000 175" preserveAspectRatio="none")
-                        polygon(points="0,175 1000,175 1000,0" fill="#eeebdf")
-                    .right-info
-                        h2.right-info__description#up Чем я могу быть вам полезен
-                        .right-info__text
+                svg.left-svg(viewbox="0 0 1000 175" preserveAspectRatio="none")
+                    polygon(points="0,175 1000,175 1000,0")
+                svg.right-svg(viewbox="0 0 1000 175" preserveAspectRatio="none")
+                    polygon(points="0,175 1000,175 1000,0")
+                .about-records
+                    .records-info
+                        h1.records-info__caption#up
+                            .title-main Обо мне
+                            .records-caption
+                                svg.records-caption__svg
+                                    use(xlink:href="img/svg/sprite.min.svg#about_header")
+                        .records-info__description
+                            .records-info__photo(style="background-image: url(img/content/ava_about.jpg);")
+                            h2.records-info__caption
+                                .title-block Кто я
+                            .records-info__text
+                                p Я веб разработчик из г. Запорожья. Мне 29 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+                                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+                .about-skills
+                    .skills-info
+                        h2.skills-info__description Чем я могу быть вам полезен
+                        .skills-info__text
                             p Больше всего меня привлекает Front-end разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-                        .right-info__content
+                        .skills-info__content
                             ul.skills-list
                               +skills-list("Front-end", ["HTML5", "CSS3", "JavaScript & jQuery", "SASS, PUG"], "4")       
                               +skills-list("Back-end", ["PHP", "mySQL", "Node.js & npm", "Mongo.db"], "4")       
@@ -40,16 +43,15 @@ block content
                 #map
                 .map-container
                     .map-info
-                        .map-title Контакты
+                        h2.map-title
+                            .title-block Контакты
                         ul.map-list
                             +map-list("img/svg/sprite.min.svg#skype", 'skype:', 'stanislav-mikhnev')       
                             +map-list("img/svg/sprite.min.svg#envelope", 'mailto:', 'stanislav.mikhniev@gmail.com')        
                             +map-list("img/svg/sprite.min.svg#phone", 'tel:380990422243', '+38 099 042 22 43') 
                             +map-list("img/svg/sprite.min.svg#map_marker", 'http://www.google.com.ua','Украина, г.Запорожье, бул.Шевченко, 11', '_blank')
-        include ../modules/footer
+        footer.footer.footer_position_absolute
+            +footer
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-    //- script(src='js/map.js')
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4f9n65-zMdyKKd9UWo00CLLGekxcE_Zs&callback=initMap")
     script(src='js/about.min.js')
-
-    

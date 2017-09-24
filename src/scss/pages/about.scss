@@ -8,55 +8,131 @@
     position: relative;
     display: flex;
     z-index: 50;
-}
 
-.about-left {
-    width: 50%;
-    background-color: #efeee9;
-}
-
-.about-right {
-    width: 50%;
-    background-color: #eeebdf;
+    @include tablets() {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .right-svg {
+    width: 50%;    
     position: absolute;
     display: block;
     bottom: 100%;
-    width: 50%;
+    right: 0;
+    fill: #eeebdf;
+    @include tablets() {
+        fill: #efeee9;      
+    }
 }
 
 .left-svg {
     @extend .right-svg;
-    fill: rgba(109, 112, 123, .1);    
+    fill: #efeee9;  
     transform: scaleX(-1);
+    left: 0;
 }
 
-.left-caption {
-    position: absolute;
-    left: rem(180px);
-    top: -6%;
-    z-index: 100;
+.about-records, .about-skills {
+    width: 50%;
+    padding-bottom: 4%;
+
+    @include tablets() {
+        width: 100%;  
+    }      
 }
 
-.left-caption__svg {
-    fill: rgba(109, 112, 112, .07);
+.about-records {
+    background-color: #efeee9;
+        @include tablets() {
+            padding-top: rem(20px);
+        }
 }
 
-.left-info, .right-info {
+.about-skills {
+    background-color: #eeebdf;
+    @include tablets() {
+        padding-top: rem(50px);
+        text-align: center;
+    }
+}
+
+.records-info {
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 100%;
-    padding-bottom: 6%;
+
+    @include desktopW {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding-top: rem(20px);    
+    }
+
+    @include desktop {
+        width: 100%;
+        flex-direction: column; 
+        align-items: center;  
+        padding-top: 0;            
+    }
+    @include vertical() {
+        padding-left: rem(5px);
+        padding-right: rem(5px);
+    } 
 }
 
-.left-info__description {
-    margin-bottom: rem(35px);    
+.records-info__caption {
+    margin-bottom: rem(35px); 
+    position: relative;   
+
+    @include desktopW {
+        width: 50%;
+        text-align: center;
+    }
 }
 
-.left-info__photo {
+.records-caption {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+
+.records-caption__svg {
+    fill: rgba(109, 112, 112, .07);
+    width: rem(250px);
+    height: rem(250px);
+}
+
+.records-info__description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include desktopW {
+        width: 50%;
+        padding-right: rem(20px);
+    }
+    @include desktop {
+        width: 100%;
+        padding-right: 0px;        
+    }
+
+    @include tablets {
+        padding: 0 15%;
+        text-align: justify;
+    }
+
+    @include vertical() {
+        padding: 0;        
+    } 
+}
+
+.records-info__photo {
     width: rem(446px);
     height: rem(391px);
     max-width: 100%;
@@ -66,41 +142,30 @@
     margin-bottom: rem(28px);
 }
 
-.left-info__caption {
-    position: relative;
-    font-family: "Bernier";    
-    font-size: rem(35px);
-    color: #455a64;  
-    margin-bottom: rem(25px);
+.records-info__caption {
+    margin-bottom: rem(25px);    
+}
 
-    &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 45%;
-        left: rem(-50px);
-        width: rem(22px);
-        height: rem(5px);
-        background-color: rgba(0, 0, 0, 0.2)
+.records-info__text  {
+    color: #455a64;
+    padding: 0 12% 0 12%;
+
+    @include desktopW {
+        padding-left: 0;
+        padding-right: rem(10px);
     }
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 45%;
-        right: rem(-50px);
-        width: rem(22px);
-        height: rem(5px);
-        background-color: rgba(0, 0, 0, 0.2)
+    @include desktop {
+        padding: 0 12% 0 12%;    
+    }
+    @include phones() {
+        padding: 0;    
+    }
+    @include vertical() {
+        padding: 0 4% 0 4%;      
     } 
 }
 
-.left-info__text  {
-    color: #455a64;
-    padding: 0 12% 0 12%;
-}
-
-.left-info__text p {
+.records-info__text p {
     font-size: rem(16px);
     line-height: rem(24px);
     margin-bottom: rem(10px);
@@ -109,7 +174,26 @@
     }
 }
 
-.right-info__description {
+.skills-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+
+    @include desktopW() {
+        padding-top: rem(20px);
+    }
+    @include desktop() {
+        padding-top: rem(0px);
+    }
+
+    @include vertical() {
+        padding-left: rem(5px);
+        padding-right: rem(5px);
+    }
+}
+
+.skills-info__description {
     display: inline-block;    
     position: relative;
     font-family: "Bernier";    
@@ -119,6 +203,11 @@
     text-transform: uppercase;
     margin-bottom: rem(17px);
     max-width: 18rem;
+
+    @include vertical() {
+        font-size: rem(28px);
+        max-width: 14rem;
+      }
 
     &:before {
         content: "";
@@ -142,19 +231,35 @@
     } 
 }
 
-.right-info__text {
+.skills-info__text {
     padding: 0 2% 0 6%;
     margin-bottom: 8%;
+
+    @include tablets() {
+        font-size: rem(15px);
+        padding: 0 18% 0 18%;
+    }
+    @include phones() {
+        padding: 0 12% 0 12%;   
+    }
+    @include vertical() {
+        padding: 0 4% 0 4%;
+        text-align: justify;
+        font-size: rem(16px);        
+    }     
 }
 
-.right-info__text p {
+.skills-info__text p {
     color: #455a64;
 }
 
-.right-info__content {
+.skills-info__content {
     width: 100%;
     padding: 0 2% 0 6%;
     
+    @include tablets() {
+        padding: 0;
+    }
 }
 
 .skills-row__title {
@@ -174,9 +279,14 @@
     width: rem(115px);
     height: rem(115px);
     margin-left: rem(25px);
-    &:first-child {
-        margin-left: 0;
+
+    @include vertical() {
+        width: rem(135px);
+        height: rem(135px);
+        margin-left: rem(40px);
+        margin-bottom: rem(40px);
     }
+
 }
 
 .skill__circle {
@@ -196,7 +306,6 @@
 }
 
 .skill__title {
-
     position: absolute;
     top: 50%;
     left: 50%;
@@ -204,7 +313,11 @@
     display: inline-block;
     font-size: rem(14px);
     color: #1bb696;
-    text-align: center;    
+    text-align: center;
+    
+    @include vertical() {
+        font-size: rem(15px);
+    }
 }
 
 .skills-row {
@@ -228,44 +341,22 @@
     padding: rem(25px) rem(25px);
     background-color: rgba(229, 247, 244,.85);
     z-index: 200;
+
+    @include vertical() {
+        top: 40%;
+    }
 }
 
 .map-info {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .map-title {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    font-family: "Bernier";    
-    font-size: rem(35px);
-    color: #373e42;
-    margin-bottom: rem(20px);
-
-    &:before {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 45%;
-        left: 20%;
-        width: rem(22px);
-        height: rem(5px);
-        background-color: rgba(0, 0, 0, 0.2)
-    }
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 45%;
-        right: 20%;
-        width: rem(22px);
-        height: rem(5px);
-        background-color: rgba(0, 0, 0, 0.2)
-    } 
+    margin-bottom: rem(25px);    
 }
-    
+
 .map-list__item {
     display: flex;
     margin-bottom: rem(20px);

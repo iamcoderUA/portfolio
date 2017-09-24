@@ -1,17 +1,19 @@
-export const blur = (function() {
-    var wrapper = document.querySelector('.feed-form__wrapper'),
-    form = document.querySelector('.form');
+// export const blur = (function() {
+//     var wrapper = document.querySelector('.feed-form__wrapper'),
+//     var wrapper = document.querySelector('.feed-form'),
+//     var wrapper = document.querySelector('.feed-form__bg'),
+//     form = document.querySelector('.form');
 
-    return {
-        set: function() {
-            var imgWidth = document.querySelector('.feed-form__bg').offsetWidth,
-                posLeft = -wrapper.offsetLeft,
-                posTop = -wrapper.offsetTop,
-                blurCSS = form.style;
+//     return {
+//         set: function() {
+//             var imgWidth = document.querySelector('.feed-form__bg').offsetWidth,
+//                 posLeft = -wrapper.offsetLeft,
+//                 posTop = -wrapper.offsetTop,
+//                 blurCSS = form.style;
 
-            blurCSS.backgroundSize = imgWidth + 'px' + ' ' + 'auto';
-            blurCSS.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px';
-        }
+//             blurCSS.backgroundSize = imgWidth + 'px' + ' ' + 'auto';
+//             blurCSS.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px';
+//         }
 
-    }
-}());
+//     }
+// }());

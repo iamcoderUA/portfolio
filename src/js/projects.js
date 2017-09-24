@@ -1,6 +1,6 @@
 import { nav } from './modules/fixed-menu.js';
 import { parallax } from './modules/parallax.js';
-import { blur } from './modules/blur.js';
+// import { blur } from './modules/blur.js';
 // import { anchor } from './modules/anchor.js';
 
 nav.navBut.onclick = function (e) {
@@ -16,11 +16,11 @@ wrapper.onscroll = function () {
    parallax.parallaxMove(parallax.info, parallax.info.getBoundingClientRect().top, 35);
 };
 
-blur.set();
+// blur.set();
 
-window.onresize = function() {
-    blur.set();
-};
+// window.onresize = function() {
+//     blur.set();
+// };
 
 // anchor.btnUp.onclick = function (e) {
 //     e.preventDefault();
