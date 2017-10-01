@@ -5,7 +5,7 @@
   right: 0;
   width: 100%;
   height: 100vh;
-  z-index: 1;
+  z-index: 3000;
   overflow: hidden;
   visibility: hidden;
   &:after {
@@ -121,6 +121,10 @@
   font-size: rem(48px);
   color: #fff;
   display: inline-block;
+
+  @include vertical() {
+    font-size: rem(36px);
+  }
   &:before {
     content: "";
     display: block;    

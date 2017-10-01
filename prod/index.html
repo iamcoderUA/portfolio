@@ -11,6 +11,21 @@
 	</head>
 	<body>
 		<div class="wrapper">
+			<div class="preloader">
+				<svg class="preloader__svg"><circle class="preloader__svg-first" opacity="0.4" fill="none" stroke-width="4" stroke-miterlimit="10" enable-background="new" cx="72" cy="71.999" r="70"/>
+<circle class="preloader__svg-sec" opacity="0.7" fill="none" stroke-width="3.8938" stroke-miterlimit="10" enable-background="new" cx="72" cy="72" r="55"/>
+<circle class="preloader__svg-third" fill="none" stroke-width="4" stroke-miterlimit="10" cx="72" cy="72" r="40"/>
+				</svg><span class="preloader__text"> </span>
+			</div>
+			<div class="parallax-mouse">
+				<div class="parallax-mouse__layer layer8" style="background-image: url(img/bg/Layer_8-min.png);"></div>
+				<div class="parallax-mouse__layer layer7" style="background-image: url(img/bg/Layer_7-min.png);"></div>
+				<div class="parallax-mouse__layer layer6" style="background-image: url(img/bg/Layer_6-min.png);"></div>
+				<div class="parallax-mouse__layer layer4" style="background-image: url(img/bg/Layer_4-min.png);"></div>
+				<div class="parallax-mouse__layer layer2" style="background-image: url(img/bg/Layer_2-min.png);"></div>
+				<div class="parallax-mouse__layer layer1" style="background-image: url(img/bg/Layer_1-min.png);"></div>
+				<div class="parallax-mouse__layer layer9" style="background-image: url(img/bg/sky-min.png);"></div>
+			</div>
 			<section class="welcome-block">
 				<div class="welcome-block__button"><a class="welcome-block__link">Авторизоваться</a></div>
 				<div class="welcome-container">
@@ -48,20 +63,20 @@
 						<div class="welcome-auth__capt">авторизуйтесь</div>
 						<form class="welcome-auth__form" method="post">
 							<div class="welcome-auth__row">
+								<input class="welcome-auth__input" type="text" placeholder="Логин" name="login">
 								<div class="welcome-auth__input-img">
 									<svg class="welcome-auth__svg">
 										<use xlink:href="img/svg/sprite.min.svg#login"></use>
 									</svg>
 								</div>
-								<input class="welcome-auth__input" type="text" placeholder="Логин" name="login">
 							</div>
 							<div class="welcome-auth__row">
+								<input class="welcome-auth__input" type="password" placeholder="Пароль" name="pass">
 								<div class="welcome-auth__input-img">
 									<svg class="welcome-auth__svg">
 										<use xlink:href="img/svg/sprite.min.svg#password"></use>
 									</svg>
 								</div>
-								<input class="welcome-auth__input" type="password" placeholder="Пароль" name="pass">
 							</div>
 							<div class="welcome-auth__row">
 								<label class="welcome-auth__label">
@@ -77,18 +92,16 @@
 							<div class="welcome-auth__radio-row">
 								<div class="welcome-auth__radio-capt">Вы точно не робот?</div>
 								<div class="welcome-auth__radio-content">
-									<div class="welcome-auth__radio-container">
-										<label class="welcome-auth__label-radio">
-											<input class="welcome-auth__radio" type="radio" name="value" value="yes">
-											<div class="welcome-auth__shadow-radio">Да</div>
-										</label>
-									</div>
-									<div class="welcome-auth__radio-container">
-										<label class="welcome-auth__label-radio">
-											<input class="welcome-auth__radio" type="radio" name="value" value="yes">
-											<div class="welcome-auth__shadow-radio">Не уверен</div>
-										</label>
-									</div>
+									<label class="welcome-auth__radio-label">
+										<input class="welcome-auth__radio" type="radio" name="value" value="yes">
+										<div class="welcome-auth__radio-fake"></div>
+										<div class="welcome-auth__radio-title">Да</div>
+									</label>
+									<label class="welcome-auth__radio-label">
+										<input class="welcome-auth__radio" type="radio" name="value" value="yes">
+										<div class="welcome-auth__radio-fake"></div>
+										<div class="welcome-auth__radio-title">Не уверен</div>
+									</label>
 								</div>
 							</div>
 							<div class="welcome-auth__but">
@@ -103,6 +116,6 @@
 				</footer>
 			</section>
 		</div>
-		<script src="js/index.min.js"></script>
+		<script src="js/main.min.js"></script>
 	</body>
 </html>

@@ -1,15 +1,9 @@
 const path = require('path');
 const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-const $ = require('jQuery');
 
 const PATHS = {
-  source: {
-    index: path.join(__dirname, 'src/js/index.js'),
-    about: path.join(__dirname, 'src/js/about.js'),
-    projects: path.join(__dirname, 'src/js/projects.js'),
-    blog: path.join(__dirname, 'src/js/blog.js'),
-  },
+  source: path.join(__dirname, 'src/js/main.js'),
   mod: path.join(__dirname, 'src/js/modules'),
   build: path.join(__dirname, 'prod/js'),
 };
@@ -41,11 +35,11 @@ const config = {
       },
     ],
   },
-  plugins: [
-    new UglifyJSPlugin({
-      sourceMap: true,
-    }),
-  ],
+  // plugins: [
+  //   new UglifyJSPlugin({
+  //     sourceMap: true,
+  //   }),
+  // ],
 };
 
 module.exports = config;

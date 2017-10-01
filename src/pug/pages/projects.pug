@@ -21,34 +21,32 @@ block content
                         svg.title-svg
                             use(xlink:href="img/svg/sprite.min.svg#works_header")
                 .portfolio-body
-                    .portfolio-slider
+                    .portfolio-slider.js-slider
                         .portfolio-slider__text
                             ul.portfolio-slider__text-list
                                 +portfolioText("LoftSchool Школа онлайн образования", "HTML5, CSS3, БЭМ", "img/svg/sprite.min.svg#link")
                                 +portfolioText("Бургер лендинг", "HTML5, SASS, JavaScript, jQuery, AJAX, PHP", "img/svg/sprite.min.svg#link")
                                 +portfolioText("Сайт портфолио", "pug, sass, JavaScript, node.js, VueJS, Gulp, WebPack", "img/svg/sprite.min.svg#link")
-                        .portfolio-slider__head
-                            .portfolio-slider__head-box
-                                img.portfolio-slider__head-img(src="img/content/slide-1.png" alt="")
+                        .portfolio-slider__head.js-slide-head
+                            //- .portfolio-slider__head-box
+                                //- img.portfolio-slider__head-img(src="img/content/slide-1.png" alt="")
                         .portfolio-slider__slides
-                            .slide-left
-                                .slide-left__nav
-                                    a.slide-left__link(href="#")
-                                        svg.slide-left__svg
-                                            use(xlink:href="img/svg/sprite.min.svg#portf_arrow_down")
-                                ul.slide-left__list
-                                    +portfolioLeftSlide("img/content/slide-2.jpg")
-                                    +portfolioLeftSlide("img/content/slide-2.jpg")
-                                    +portfolioLeftSlide("img/content/slide-2.jpg")
-                            .slide-right
-                                .slide-right__nav
-                                    a.slide-right__link(href="#")
-                                        svg.slide-right__svg
-                                            use(xlink:href="img/svg/sprite.min.svg#portf_arrow_up")
-                                ul.slide-right__list
-                                    +portfolioRightSlide("img/content/slide-3.jpg")
-                                    +portfolioRightSlide("img/content/slide-3.jpg")
-                                    +portfolioRightSlide("img/content/slide-3.jpg")
+                            .slide-left.js-slide-left
+                                a.slide-left__nav(href="#")
+                                    svg.slide-left__svg
+                                        use(xlink:href="img/svg/sprite.min.svg#portf_arrow_down")
+                                //- ul.slide-left__list
+                                    //- +portfolioLeftSlide("img/content/slide-2.jpg")
+                                    //- +portfolioLeftSlide("img/content/slide-2.jpg")
+                                    //- +portfolioLeftSlide("img/content/slide-2.jpg")
+                            .slide-right.js-slide-right
+                                a.slide-right__nav(href="#")
+                                    svg.slide-right__svg
+                                        use(xlink:href="img/svg/sprite.min.svg#portf_arrow_up")
+                                //- ul.slide-right__list
+                                    //- +portfolioRightSlide("img/content/slide-3.jpg")
+                                    //- +portfolioRightSlide("img/content/slide-3.jpg")
+                                    //- +portfolioRightSlide("img/content/slide-3.jpg")
             section.feed
                 .feed-wrapper
                     h2.feed-title
@@ -57,8 +55,8 @@ block content
                             svg.title-svg
                                 use(xlink:href="img/svg/sprite.min.svg#about_header")
                     ul.feed-list
-                        +feed-list("img/icons/quotes.png", "Этот парень проходил обучение веб-разработке не где-то, а в Loftschool, 4 месяца только самых тяжелых испытаний и бессонных ночей!", "background-image: url(img/content/dima.png)", "Ковальчук Дмитрий", "Основатель Loftschool")
-                        +feed-list("img/icons/quotes.png", "Этот код выдержит любые испытания. Только, пожалуйста, не занружайте сайт на слишком старых браузерах!", "background-image: url(img/content/vova.png)", "Сабанцев Владимир", "Преподователь")
+                        +feed-list("Этот парень проходил обучение веб-разработке не где-то, а в Loftschool, 4 месяца только самых тяжелых испытаний и бессонных ночей!", "background-image: url(img/content/dima.png)", "Ковальчук Дмитрий", "Основатель Loftschool")
+                        +feed-list("Этот код выдержит любые испытания. Только, пожалуйста, не занружайте сайт на слишком старых браузерах!", "background-image: url(img/content/vova.png)", "Сабанцев Владимир", "Преподователь")
                     .feed-form
                         .feed-form__blur
                             .feed-form__bg
@@ -81,5 +79,4 @@ block content
                                 use(xlink:href="img/svg/sprite.min.svg#arrow_down")
         footer.footer
             +footer
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
-    script(src='js/projects.min.js')
+    script(src='js/main.min.js')

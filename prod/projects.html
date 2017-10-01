@@ -72,7 +72,7 @@
 						</div>
 					</h1>
 					<div class="portfolio-body">
-						<div class="portfolio-slider">
+						<div class="portfolio-slider js-slider">
 							<div class="portfolio-slider__text">
 								<ul class="portfolio-slider__text-list">
 									<li class="portfolio-slider__text-item">
@@ -104,32 +104,16 @@
 									</li>
 								</ul>
 							</div>
-							<div class="portfolio-slider__head">
-								<div class="portfolio-slider__head-box"><img class="portfolio-slider__head-img" src="img/content/slide-1.png" alt=""></div>
-							</div>
+							<div class="portfolio-slider__head js-slide-head"></div>
 							<div class="portfolio-slider__slides">
-								<div class="slide-left">
-									<div class="slide-left__nav"><a class="slide-left__link" href="#">
-											<svg class="slide-left__svg">
-												<use xlink:href="img/svg/sprite.min.svg#portf_arrow_down"></use>
-											</svg></a></div>
-									<ul class="slide-left__list">
-										<li class="slide-left__item"><img class="slide-left__img" src="img/content/slide-2.jpg"/></li>
-										<li class="slide-left__item"><img class="slide-left__img" src="img/content/slide-2.jpg"/></li>
-										<li class="slide-left__item"><img class="slide-left__img" src="img/content/slide-2.jpg"/></li>
-									</ul>
-								</div>
-								<div class="slide-right">
-									<div class="slide-right__nav"><a class="slide-right__link" href="#">
-											<svg class="slide-right__svg">
-												<use xlink:href="img/svg/sprite.min.svg#portf_arrow_up"></use>
-											</svg></a></div>
-									<ul class="slide-right__list">
-										<li class="slide-right__item"><img class="slide-right__img" src="img/content/slide-3.jpg"/></li>
-										<li class="slide-right__item"><img class="slide-right__img" src="img/content/slide-3.jpg"/></li>
-										<li class="slide-right__item"><img class="slide-right__img" src="img/content/slide-3.jpg"/></li>
-									</ul>
-								</div>
+								<div class="slide-left js-slide-left"><a class="slide-left__nav" href="#">
+										<svg class="slide-left__svg">
+											<use xlink:href="img/svg/sprite.min.svg#portf_arrow_down"></use>
+										</svg></a></div>
+								<div class="slide-right js-slide-right"><a class="slide-right__nav" href="#">
+										<svg class="slide-right__svg">
+											<use xlink:href="img/svg/sprite.min.svg#portf_arrow_up"></use>
+										</svg></a></div>
 							</div>
 						</div>
 					</div>
@@ -146,7 +130,6 @@
 						</h2>
 						<ul class="feed-list">
 							<li class="feed-list__item">
-								<div class="feed-list__link"><img class="feed-list__icon" src="img/icons/quotes.png"/></div>
 								<div class="feed-list__text">Этот парень проходил обучение веб-разработке не где-то, а в Loftschool, 4 месяца только самых тяжелых испытаний и бессонных ночей!</div>
 								<div class="feed-list__description">
 									<div class="feed-list__photo">
@@ -159,7 +142,6 @@
 								</div>
 							</li>
 							<li class="feed-list__item">
-								<div class="feed-list__link"><img class="feed-list__icon" src="img/icons/quotes.png"/></div>
 								<div class="feed-list__text">Этот код выдержит любые испытания. Только, пожалуйста, не занружайте сайт на слишком старых браузерах!</div>
 								<div class="feed-list__description">
 									<div class="feed-list__photo">
@@ -243,11 +225,10 @@
 				</div>
 				<div class="footer-bottom">
 					<div class="foot-info">&#171iamcoderUA&#187 Нелицензированное использование материалов данного сайта запрещено!</div>
-					<div class="foot-copyright">© Веб-разработчик Станислав Михнев | создано с любовью | 2017</div>
+					<div class="foot-copyright">&copy Веб-разработчик Станислав Михнев | создано с любовью | 2017</div>
 				</div>
 			</footer>
 		</div>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="js/projects.min.js"></script>
+		<script src="js/main.min.js"></script>
 	</body>
 </html>

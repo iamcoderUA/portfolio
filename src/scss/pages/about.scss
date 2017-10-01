@@ -262,6 +262,10 @@
     }
 }
 
+.skills-list__item {
+    margin-bottom: rem(23px);
+}
+
 .skills-row__title {
     font-family: "Roboto-Medium";
     font-size: rem(28px);
@@ -273,7 +277,7 @@
     margin-left: rem(-25px);    
 }
 
-.skill {
+.skills-row__item {
     position: relative;
     display: inline-block;
     width: rem(115px);
@@ -289,23 +293,23 @@
 
 }
 
-.skill__circle {
+.skills-row__circle {
     fill: none;
     stroke-width: 20;
 }
 
 
-.skill__circle-first {
+.skills-row__circle-first {
     stroke: #dfdcd5;
 }
 
-.skill__circle-second {
+.skills-row__circle-second {
     stroke: #1bb696;
     stroke-dasharray: .0010 282.6;
     transition: all 1s;
 }
 
-.skill__title {
+.skills-row__text {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -318,10 +322,6 @@
     @include vertical() {
         font-size: rem(15px);
     }
-}
-
-.skills-row {
-    margin-bottom: rem(23px);
 }
 
 .google-map {

@@ -26,7 +26,8 @@
         background: url(../img/bg/bg_index.jpg) no-repeat;
         background-position: center top;
         background-size: cover;
-        width: 100%;        
+        width: 100%;
+        max-width: 180%;       
         height: 100%;
     }
 }
@@ -92,7 +93,7 @@
     flex-direction: column;
     justify-content: center;    
     align-items: center;
-    z-index: 100;
+    z-index: 10;
     transition: opacity 1s;
 }
 
@@ -124,7 +125,7 @@
     bottom: 10%;
     left: 50%; 
     transform: translate(-50%, -10%);
-    z-index: 200;
+    z-index: 50;
 
     &__but {
         display: inline-block;
