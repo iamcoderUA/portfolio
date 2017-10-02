@@ -1,4 +1,4 @@
-export const blogMenu = function () {
+export default function blogMenu() {
     const blogNav = document.querySelector('.blog-nav');
     const navList = blogNav.querySelector('.blog-nav__list');
     const navItems = blogNav.getElementsByClassName('blog-nav__item');

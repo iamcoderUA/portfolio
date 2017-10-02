@@ -1,4 +1,4 @@
-export const nav = function() {
+export default function nav() {
     const
         navigation = document.querySelector('.navigation'),    
         navItems = document.getElementsByClassName('navigation__item'),

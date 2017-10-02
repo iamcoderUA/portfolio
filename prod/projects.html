@@ -56,14 +56,14 @@
 						</svg></a></div>
 			</header>
 			<main class="content">
-				<section class="works">
+				<section class="works" id="up">
 					<svg class="left-svg" viewbox="0 0 1000 175" preserveAspectRatio="none">
 						<polygon points="0,175 1000,175 1000,0" fill="#faf8f0"></polygon>
 					</svg>
 					<svg class="right-svg right-svg_position" viewbox="0 0 1000 175" preserveAspectRatio="none">
 						<polygon points="0,175 1000,175 1000,0" fill="#faf8f0"></polygon>
 					</svg>
-					<h1 class="works-title" id="up">
+					<h1 class="works-title">
 						<div class="title-main">Мои работы</div>
 						<div class="works-title__image">
 							<svg class="title-svg">
@@ -72,48 +72,30 @@
 						</div>
 					</h1>
 					<div class="portfolio-body">
-						<div class="portfolio-slider js-slider">
+						<div class="portfolio-slider">
 							<div class="portfolio-slider__text">
-								<ul class="portfolio-slider__text-list">
-									<li class="portfolio-slider__text-item">
-										<div class="portfolio-slider__text-capt">
-											<div class="title-block">LoftSchool Школа онлайн образования</div>
-										</div>
-										<div class="portfolio-slider__text-tech">HTML5, CSS3, БЭМ</div><a class="portfolio-text__but" href="#">Просмотреть сайт
-											<svg class="portfolio-slider__text-svg">
-												<use xlink:href="img/svg/sprite.min.svg#link"></use>
-											</svg></a>
-									</li>
-									<li class="portfolio-slider__text-item">
-										<div class="portfolio-slider__text-capt">
-											<div class="title-block">Бургер лендинг</div>
-										</div>
-										<div class="portfolio-slider__text-tech">HTML5, SASS, JavaScript, jQuery, AJAX, PHP</div><a class="portfolio-text__but" href="#">Просмотреть сайт
-											<svg class="portfolio-slider__text-svg">
-												<use xlink:href="img/svg/sprite.min.svg#link"></use>
-											</svg></a>
-									</li>
-									<li class="portfolio-slider__text-item">
-										<div class="portfolio-slider__text-capt">
-											<div class="title-block">Сайт портфолио</div>
-										</div>
-										<div class="portfolio-slider__text-tech">pug, sass, JavaScript, node.js, VueJS, Gulp, WebPack</div><a class="portfolio-text__but" href="#">Просмотреть сайт
-											<svg class="portfolio-slider__text-svg">
-												<use xlink:href="img/svg/sprite.min.svg#link"></use>
-											</svg></a>
-									</li>
-								</ul>
+								<h1 class="portfolio-slider__text-capt"></h1>
+								<div class="portfolio-slider__text-tech"></div><a class="portfolio-text__but" href="#">Перейти на сайт
+									<svg class="portfolio-slider__text-svg">
+										<use xlink:href="img/svg/sprite.min.svg#link"></use>
+									</svg></a>
 							</div>
-							<div class="portfolio-slider__head js-slide-head"></div>
+							<div class="portfolio-slider__head">
+								<div class="portfolio-slider__head-box"><img class="portfolio-slider__head-img" src="" alt=""></div>
+							</div>
 							<div class="portfolio-slider__slides">
-								<div class="slide-left js-slide-left"><a class="slide-left__nav" href="#">
-										<svg class="slide-left__svg">
+								<div class="portfolio-slider__slides-container"><a class="portfolio-slider__slides-navlink" href="#">
+										<svg class="portfolio-slider__slides-navsvg">
 											<use xlink:href="img/svg/sprite.min.svg#portf_arrow_down"></use>
-										</svg></a></div>
-								<div class="slide-right js-slide-right"><a class="slide-right__nav" href="#">
-										<svg class="slide-right__svg">
+										</svg></a>
+									<ul class="portfolio-slider__slides-list">       </ul>
+								</div>
+								<div class="portfolio-slider__slides-container"><a class="portfolio-slider__slides-navlink" href="#">
+										<svg class="portfolio-slider__slides-navsvg">
 											<use xlink:href="img/svg/sprite.min.svg#portf_arrow_up"></use>
-										</svg></a></div>
+										</svg></a>
+									<ul class="portfolio-slider__slides-list"></ul>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -128,6 +110,7 @@
 								</svg>
 							</div>
 						</h2>
+						<div class="feed-bg"><img class="feed-bg__img" src="img/bg/bg_projects.png"></div>
 						<ul class="feed-list">
 							<li class="feed-list__item">
 								<div class="feed-list__text">Этот парень проходил обучение веб-разработке не где-то, а в Loftschool, 4 месяца только самых тяжелых испытаний и бессонных ночей!</div>

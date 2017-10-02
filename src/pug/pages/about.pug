@@ -10,14 +10,14 @@ block content
         header.header
             +header("img/svg/sprite.min.svg#portfolio_header", "Станислав Михнев", "Личный сайт Front-end разработчика")
         main.content
-            section.about
+            section.about#up
                 svg.left-svg(viewbox="0 0 1000 175" preserveAspectRatio="none")
                     polygon(points="0,175 1000,175 1000,0")
                 svg.right-svg(viewbox="0 0 1000 175" preserveAspectRatio="none")
                     polygon(points="0,175 1000,175 1000,0")
                 .about-records
                     .records-info
-                        h1.records-info__caption#up
+                        h1.records-info__caption
                             .title-main Обо мне
                             .records-caption
                                 svg.records-caption__svg

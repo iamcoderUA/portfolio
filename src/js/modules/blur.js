@@ -1,19 +1,18 @@
-// export const blur = (function() {
-//     var wrapper = document.querySelector('.feed-form__wrapper'),
-//     var wrapper = document.querySelector('.feed-form'),
-//     var wrapper = document.querySelector('.feed-form__bg'),
-//     form = document.querySelector('.form');
+export default function blur() {
+    const feedBg = document.querySelector('.feed-bg__img');
+    const form = document.querySelector('.feed-form');
+    const formBg = form.querySelector('.feed-form__bg');
+    const blurCSS = formBg.style;
+    
+    return {
+        set() {
+            const imgWidth = feedBg.offsetWidth;
+            const imgHeight = feedBg.offsetHeight;
+            const posLeft = -form.offsetLeft;
+            const posTop = -form.offsetTop;
 
-//     return {
-//         set: function() {
-//             var imgWidth = document.querySelector('.feed-form__bg').offsetWidth,
-//                 posLeft = -wrapper.offsetLeft,
-//                 posTop = -wrapper.offsetTop,
-//                 blurCSS = form.style;
-
-//             blurCSS.backgroundSize = imgWidth + 'px' + ' ' + 'auto';
-//             blurCSS.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px';
-//         }
-
-//     }
-// }());
+            blurCSS.backgroundSize = `${imgWidth  }px` + ` ${  imgHeight  }px`;
+            blurCSS.backgroundPosition = posLeft + 'px' + ' ' + posTop + 'px';
+        }
+    }
+};

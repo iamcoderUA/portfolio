@@ -1,29 +1,16 @@
 import preloader from './modules/preloader.js';
-import { auth } from './modules/auth.js';
-import { nav } from './modules/fixed-menu.js';
-import { parallaxMain } from './modules/parallax-main.js';
-import { initMap } from './modules/map.js';
-import { blogMenu } from './modules/blog-menu.js';
-import { sliderMain } from './modules/slider.js';
-// import { blur } from './modules/blur.js';
-import { anchor } from './modules/anchor.js';
+import parallaxMain from './modules/parallax-main.js';
+import auth from './modules/auth.js';
+import nav from './modules/fixed-menu.js';
+import initMap from './modules/map.js';
+import blogMenu from './modules/blog-menu.js';
+import slider from './modules/slider.js';
+import blur from './modules/blur.js';
+import anchor from './modules/anchor.js';
 
 
-// Parallax
-const wrapper = document.querySelector('body');
-const bg = document.querySelector('.header-bg');
-const portfolio = document.querySelector('.header-name');
-const info = document.querySelector('.header-info');
-// Authorization form
-const btn = document.querySelector('.welcome-block__link');
-const goBack = document.querySelector('.welcome-auth__homelink');
-// Fixed-Menu
-const navBtn = document.querySelector('.navigation__but');
 // Preloader
 const preload = preloader();
-
-
-// Preloader
 preload.show();
 
 // Parallax-Mouse
@@ -34,17 +21,23 @@ if (document.getElementsByClassName('parallax-mouse').length > 0) {
 
 // Parallax-Scroll
 if (document.getElementsByClassName('header-bg').length > 0) {
-    const parallax = parallaxMain();
+	const parallax = parallaxMain();
+	const wrapper = document.querySelector('body');
+	const bg = document.querySelector('.header-bg');
+	const portfolio = document.querySelector('.header-name');
+	const info = document.querySelector('.header-info');
     wrapper.onscroll = function () {
-		parallax.parallaxMove(bg, bg.getBoundingClientRect().top, 75);
-		parallax.parallaxMove(portfolio, portfolio.getBoundingClientRect().top, 25);
-		parallax.parallaxMove(info, info.getBoundingClientRect().top, 35);
+		parallax.parallaxScroll(bg, bg.getBoundingClientRect().top, 75);
+		parallax.parallaxScroll(portfolio, portfolio.getBoundingClientRect().top, 25);
+		parallax.parallaxScroll(info, info.getBoundingClientRect().top, 35);
 	};
 };
 
 // Authorization form
 if (document.getElementsByClassName('welcome-container').length > 0) {
 	const formAuth = auth();
+	const btn = document.querySelector('.welcome-block__link');
+	const goBack = document.querySelector('.welcome-auth__homelink');
 	btn.onclick = function (e) {
 		e.preventDefault();
 		formAuth.rotate(btn);
@@ -58,6 +51,7 @@ if (document.getElementsByClassName('welcome-container').length > 0) {
 // Fixed-Menu
 if (document.getElementsByClassName('navigation').length > 0) {
 	const fixedMenu = nav();
+	const navBtn = document.querySelector('.navigation__but');
 	navBtn.onclick = function (e) {
 		e.preventDefault();
 		fixedMenu.navActive(navBtn);
@@ -89,36 +83,32 @@ if (document.getElementsByClassName('blog-menu').length > 0) {
 }
 
 // Slider
-if (document.getElementsByClassName('portfolio-slider').length > 0) {
-	const sliderInit = sliderMain();
-	const slideLeft = document.querySelector('.js-slide-left');
-	const slideRight = document.querySelector('.js-slide-right');
-	let currentSlide = 0;
-	sliderInit.fillSlider();
-	slideLeft.onclick = function(e) {
-		e.preventDefault();
-        sliderInit.fillSlider();
-    }
-    slideRight.onclick = function(e) {
-		e.preventDefault();		
-        sliderInit.fillSlider();
-    } 
+if (document.getElementsByClassName('works').length > 0) {
+	const sliderObj = slider();
+	sliderObj.sliderInit(document.querySelector('.portfolio-slider'));
+	sliderObj.slideNav();
+  }
+
+// Blur Form
+if (document.getElementsByClassName('feed-form').length > 0) {
+	const blurForm = blur();
+	window.onload = function () {
+		blurForm.set();
+	}
+	window.onresize = function() {
+    	blurForm.set();
+	};
 }
-
-
-// blur.set();
-
-// window.onresize = function() {
-//     blur.set();
-// };
 
 // Anchor
 if (document.getElementsByClassName('next-arrow__but').length > 0) {
 	const scroll = anchor();
-	const arrow = document.querySelector('.next-arrow__but');
+	const arrow = document.getElementsByClassName('next-arrow__but');
 
-	arrow.onclick = function(e) {
-	e.preventDefault();
-    scroll.scrollSmooth();
-	};
+	for (let i = 0; i < arrow.length; i++) {
+		arrow[i].onclick = function(e) {
+			e.preventDefault();
+			scroll.scrollSmooth();
+		};
+	}
 }

@@ -1,294 +1,264 @@
-.portfolio-capt {
-    background-color: #faf8f0;
-  }
+.portfolio-body {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      height: 100vh;
+      background-color: #fff;
   
-.portfolio-capt {
-    position: relative;
-    padding-bottom: rem(35px);
-    display: flex;
-    justify-content: center;
-
-    @include phones {
-      padding-bottom: 0;
-      height: rem(95px);
-    }
+      @include desktopW {
+        height: 100vh;
+      }
+      @include tablets() {
+        flex-direction: column;
+        height: inherit;
+      }
+      @include phones() {
+        height: 100%;
+      }
 }
   
-  .portfolio-capt__svg {
-    fill: rgba(0,0,0, .07);
-    max-height: rem(180px);
-    max-width: rem(500px);
+.js-slider-text {
+  width: 50%;
+  height: 100%;
+  background-color: #f0efe9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @include tablets() {
+    order: 1;
     width: 100%;
-    @include phones() {
-      position: relative;
-      bottom: rem(15px);
-      max-width: rem(260px);
-    }
+    padding: rem(20px) rem(4px) rem(20px) rem(4px);
   }
-  
-  .portfolio-capt__text {
+}
+
+.js-slider-capt {
+  position: relative;
+  display: inline-block;
+  max-width: rem(400px);
+  padding: 0 rem(40px);
+  margin-bottom: rem(38px);
+  font-family: "Bernier-Regular";
+  font-size: rem(35px);
+  text-align: center;
+  color: #455a64;
+  &:before {
+    content: "";
     position: absolute;
-    top: 30%;
-    font-family: "Bernier";
-    font-size: rem(63px);
+    top: 48%;
+    left: 0;
     display: block;
-    color: #373e42;
-    &:before {
-      content: "";
-      position: absolute;
-      top: 44%;
-      left: rem(-45px);
-      display: block;
-      width: rem(22px);
-      height: rem(5px);
-      background-color: rgba(0,0,0, .2);
-    }
-    &:after {
-      @extend .portfolio-capt__text:before;
-      left: initial;
-      right: rem(-45px);
-    }
-    @include phones() {
-      font-size: rem(35px);
-      top: 22%;
-      left: rem(80px);
-    }
+    width: rem(22px);
+    height: rem(5px);
+    background-color: rgba(0,0,0, .3);
   }
-  
-  .portfolio-body {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 100vh;
-    background-color: #fff;
+  &:after {
+    @extend .js-slider-capt:before;
+    left: inherit;
+    right: 0;
+  }
+  @include tablets() {
+    font-size: rem(30px);
+    margin-bottom: rem(20px);
+  }
+}
 
-    @include desktopW {
-      height: 100vh;
-    }
-    @include tablets() {
-      flex-direction: column;
-      height: inherit;
-    }
-    @include phones() {
-      height: 100%;
-    }
-  }
 
-  .portfolio-slider__text {
-    width: 50%;
-    height: 100%;
-    background-color: #f0efe9;
-    @include tablets() {
-      order: 1;
-      width: 100%;
-      padding: rem(40px) rem(4px) rem(60px) rem(4px);
-    }
-  }
-  
-  .portfolio-slider__text-list {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .portfolio-slider__text-item {
-    display: none;
-    text-align: center;
-    &:first-child {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-  
-  .portfolio-slider__text-capt {
-    max-width: rem(300px);
-    margin-bottom: rem(38px);
-    text-align: center;
-
-    @include vertical() {
-      max-width: rem(220px);
-    }
-  }
-  
-  .portfolio-slider__text-tech {
-    margin-bottom: rem(40px);
-    padding: rem(18px) rem(100px);
-    font-family: "Roboto-Regular";
-    font-weight: 500;
-    font-size: rem(16px);
-    text-transform: uppercase;
-    color: #20b5a1;
-    border: 1px solid #00bfa5;
-    border-left: none;
-    border-right: none;
-    text-align: center;
-  }
-  
-  .portfolio-text__but {
-    position: relative;
-    display: inline-block;
-    padding: rem(13px) rem(18px) rem(13px) rem(48px);
-    background-color: #00bfa5;
-    border-radius: rem(5px);
-    font-family: "Roboto-Regular";
-    font-weight: 500;
-    font-size: rem(16px);
-    color: #fff;
-  }
-  
-  .portfolio-slider__text-svg {
+.js-slider-tech {
+  position: relative;
+  margin-bottom: rem(40px);
+  padding: rem(18px) rem(100px);
+  font-family: "Roboto-Medium";
+  font-weight: 500;
+  font-size: rem(16px);
+  text-transform: uppercase;
+  color: #20b5a1;
+  text-align: center;
+  &:before {
+    content: "";
     position: absolute;
-    top: 10px;
-    left: 13px;
-    width: rem(20px);
-    height: rem(20px);
-    fill: #fff;
-  }
-
-  .portfolio-slider {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    width: 100%;
-    max-height: 100%;
-    background-color: #efebe0;
-    @include tablets() {
-      width: 100%;
-      flex-wrap: nowrap;
-    }
-  }
-  
-  .portfolio-slider__head {
+    top: 0;
+    left: 0;
+    display: block;
     width: 50%;
-    height: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;    
-    padding: rem(30px);
-    
-    @include tablets() {
-      order: 0;
-      width: 100%;
-      height: rem(450px);
-      display: block;
-      margin: 0 auto;
-    }
+    height: 100%;
+    border: 1px solid #20b5a1;
+    border-right: none;
+    border-left: none;
   }
-  
-  // .portfolio-slider__head-box {
-  //   padding: rem(30px);
-  //   max-height: 100%;
-  //   height: 100%;
-  //   width: 100%;
-  //   display: flex;
-  //   align-items: center;
-  // }
-  
-  .portfolio-slider__head-img {
-    max-width: 100%;
-    max-height: 100%;
+  &:after {
+    @extend .js-slider-tech:before;
+      left: inherit;
+      right: 0;
+  }
+  @include tablets() {
+    margin-bottom: rem(20px);
+  }
+  @include phones() {
+    padding: rem(8px);
+  }
+}
+
+.portfolio-text__but {
+  position: relative;
+  display: inline-block;
+  padding: rem(13px) rem(18px) rem(13px) rem(48px);
+  background-color: #00bfa5;
+  border-radius: rem(5px);
+  font-family: "Roboto-Medium";
+  font-size: rem(16px);
+  color: #fff;
+
+
+}
+
+.portfolio-slider__text-svg {
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  width: rem(20px);
+  height: rem(20px);
+  fill: #fff;
+}
+
+.portfolio-slider {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  max-height: 100%;
+  height: 100%;
+  background-color: #efebe0;
+  @include tablets() {
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+}
+
+.js-slider-head {
+  width: 50%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  @include tablets() {
+    order: 0;
+    height: 60%;
     display: block;
     margin: 0 auto;
   }
-  
-  .portfolio-slider__slides {
-    display: flex;
-    width: 50%;
-    height: 30%;
-    @include tablets() {
-      order: 2;
-      width: 100%;
-    }
-  }
-  
-  .slide-left {
-    position: relative;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
+}
 
-    @include tablets() {
-      max-height: rem(225px);
-    }
-    @include phones() {
-      max-height: rem(150px);
-    }
-    @include vertical() {
-      max-height: rem(120px);
-    }
+.portfolio-slider__head-box {
+  padding: rem(30px);
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.portfolio-slider__head-img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin: 0 auto;
+  opacity: 1;
+  &.active {
+    animation: slideAnim 1.55s;
   }
-  
-  .slide-left__nav {
-    position: absolute;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
+}
+
+.js-slider-slide {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  width: 50%;
+  height: 30%;
+  @include tablets() {
+    height: rem(225px);
     width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    order: 3;
+  }
+}
+
+.js-slider-left {
+  position: relative;
+  display: block;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.js-slider-right {
+  @extend .js-slider-left;
+}
+
+.js-nav-left {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0, .1);
+  transition: 1s;
+  &:hover {
+    background-color: rgba(0,0,0, .5);
     transition: 1s;
-    &:hover {
-      background-color: rgba(0,0,0,0.2);
+    & .portfolio-slider__slides-navsvg {
+      transform: translateY(-10px);
       transition: 1s;
     }
-    &:hover .slide-left__svg {
-      fill: rgba(255,255,255,1);
-    }
   }
-  
-  .slide-left__svg {
-    width: rem(25px);
-    height: rem(25px);
-    fill: rgba(255,255,255, .5);
-  }
-  
-  // .slide-left__list {
-  //   width: 100%;
-  //   height: 100%;
-  //   display: block;
-  //   flex-direction: column;
-  // }
-  
-  // .slide-left__item {
-  //   width: 100%;
-  //   height: 100%;
-  //   transform: translateY(-100%);
-  //   @include tablets() {
-  //     height: rem(225px);
-  //   }
-  // }
-  
-  .slide-left__img {
-    width: 100%;
-    width: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
-  }
-  
-  .slide-right {
-    @extend  .slide-left;
-    // &__item {
-    //   @extend  .slide-left__item;
-    // }
-    &__img {
-      @extend  .slide-left__img;
-    }
-    // &__list {
-    //   @extend .slide-left__list;
-    //   flex-direction: column-reverse;
-    // }
-    &__nav {
-      @extend .slide-left__nav;
-    }
-    &__svg {
-      @extend .slide-left__svg;
-    }
-  }
-  
-  
+}
+
+.js-nav-right {
+  @extend .js-nav-left;
+}
+
+.portfolio-slider__slides-navsvg {
+  z-index: 10;
+  width: rem(25px);
+  height: rem(25px);
+  fill: #fff;
+  transition: 1s;
+}
+
+
+.js-slidelist-left {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.js-slidelist-right {
+  @extend .js-slidelist-left;
+}
+
+.js-slider-item {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.js-slider-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: rem(10px);
+  display: block;
+  max-width: 70%;
+  max-height: 100%;
+  transform: translate(-50%,-50%);
+}

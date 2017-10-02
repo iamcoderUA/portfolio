@@ -1,4 +1,4 @@
-export function initMap() {
+export default function initMap() {
     var styledMapType = new google.maps.StyledMapType(
       [
         {
