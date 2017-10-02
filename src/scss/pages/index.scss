@@ -101,6 +101,10 @@
     bottom: -40%;
   }
 
+  .layer9 {
+    bottom: -60%;      
+  }
+
 .welcome-block {
     width: 100%;
     height: 100vh;
@@ -483,7 +487,7 @@ a.welcome-block__link {
     width: 1.25rem;
     height: 1.25rem;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: rgb(240, 239, 233);
     position: relative;
     &:after {
         content: "";
