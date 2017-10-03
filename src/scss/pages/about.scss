@@ -309,6 +309,19 @@
     transition: all 1s;
 }
 
+.skills-row__circle-second[data-skill=skills] {
+    animation: skills 2s forwards;
+}
+
+@keyframes skills {
+    0% {
+        stroke-dasharray: .001 282.6;   
+    }
+    100% {
+        stroke-dasharray: 141.3 282.6;
+    }
+}
+
 .skills-row__text {
     position: absolute;
     top: 50%;

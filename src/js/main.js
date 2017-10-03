@@ -7,6 +7,7 @@ import blogMenu from './modules/blog-menu.js';
 import slider from './modules/slider.js';
 import blur from './modules/blur.js';
 import anchor from './modules/anchor.js';
+import skills from './modules/skills.js';
 
 
 // Preloader
@@ -112,3 +113,11 @@ if (document.getElementsByClassName('next-arrow__but').length > 0) {
 		};
 	}
 }
+
+// Skills-Scroll
+if (document.getElementsByClassName('skills-list').length > 0) {
+	const skillsScroll = skills();
+    document.onscroll = function () {
+		skillsScroll.skillsAnim();
+	};
+};
