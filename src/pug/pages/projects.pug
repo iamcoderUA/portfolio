@@ -62,14 +62,29 @@ block content
                                 .title-block Связаться со мной
                             form.form(method="post")
                                 .form-row
-                                    input.form-row__input(type="text" placeholder="Логин" name="login")
+                                    input.form-row__input(type="text" placeholder="Имя" name="name")
                                 .form-row
-                                    input.form-row__input(type="password" placeholder="Пароль" name="pass")
+                                    input.form-row__input(type="email" placeholder="E-mail" name="email")
                                 .form-row
                                         input.form-row__textarea(type="textarea" placeholder="Ваше сообщение" name="message")
                                 .form-but
                                     input.form-row__homelink(type="submit" value="Отправить")
                                     input.form-row__submit(type="reset" value="Очистить")
+                    .form-popup#succes
+                        .form-popup__close(href='').close-btn
+                        .form-popup__content
+                            .form-popup__text Сообщение отправлено!
+                            a.form-popup__link(href='').close-btn Закрыть
+                    .form-popup#error
+                        .form-popup__close(href='').close-btn
+                        .form-popup__content
+                            .form-popup__text.error-message Не все поля формы заполнены!
+                            a.form-popup__link(href='').close-btn Закрыть
+                    .form-popup#error-server
+                        .form-popup__close(href='').close-btn
+                        .form-popup__content
+                            .form-popup__text.error-message На сервере произошла ошибка!
+                            a.form-popup__link(href='').close-btn Закрыть
                     .back-arrow
                         a.next-arrow__but(href="#up")
                             svg.next-arrow__svg

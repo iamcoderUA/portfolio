@@ -8,6 +8,7 @@ import slider from './modules/slider.js';
 import blur from './modules/blur.js';
 import anchor from './modules/anchor.js';
 import skills from './modules/skills.js';
+import formValid from './modules/validation.js';
 
 
 // Preloader
@@ -119,5 +120,16 @@ if (document.getElementsByClassName('skills-list').length > 0) {
 	const skillsScroll = skills();
     document.onscroll = function () {
 		skillsScroll.skillsAnim();
+	};
+};
+// Form Validation
+if (document.getElementsByClassName('feed-form').length > 0) {
+	const valid = formValid();
+	const form = document.querySelector('.form');	
+	const submitBtn = document.querySelector('.form-row__homelink');
+
+	form.onsubmit = function(e) {
+		e.preventDefault();
+		valid.submitForm();
 	};
 };

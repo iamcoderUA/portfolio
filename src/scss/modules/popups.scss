@@ -1,0 +1,132 @@
+.form-popup {
+    width: rem(280px);
+    max-width: rem(400px);
+    max-height: 100%;
+    position: absolute;
+    top: 47%;
+    left: 68%;    
+    background-color: #f5f2f2;
+    border-radius: rem(7px);
+    padding: rem(15px) rem(10px) rem(20px) rem(10px);
+    visibility: hidden;
+    z-index: 1000;
+    opacity: 0;
+    transition: 1s;
+    animation: hidePopup 1s linear; 
+
+    @include tablets() {
+        max-width: 300px;
+        top: 39%;
+        left: 33%;
+        padding: rem(10px) rem(10px) rem(15px) rem(10px);
+    
+    }
+    @include phones() {
+        max-width: 290px;
+        top: 43%;
+        left: 21.5%;
+    }
+    @include vertical() {
+        max-width: 290px;
+        top: 45%;
+        left: 14.5%;
+    }
+    &.active {
+        visibility: visible;
+        animation: showPopup .5s linear;  
+        opacity: 1;
+        transition: 1s;
+    }
+}
+
+@keyframes showPopup {
+    from {
+      transform: translate3d(100%, 0, 0);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  @keyframes hidePopup {
+    40% {
+      opacity: 1;
+      transform: scale3d(.475, .475, .475) translate3d(-42px, 0, 0);
+    }
+    to {
+      opacity: 0;
+      transform: scale(.1) translate3d(2000px, 0, 0);
+      transform-origin: right center;
+    }
+  }
+  
+.form-popup__close {
+	position: absolute;
+	top: -5px;
+	right: 0;
+	width: 34px;
+	height: 34px;
+    background: transparent;
+	color: $greenL;
+    opacity: .7;   
+    transition: .3s; 
+
+	&:after {
+		content: '×';
+		position: absolute;
+		top: 0;
+		right: 30px;
+		width: 0px;
+		height: 0px;
+		font: 34px/44px Arial,"Helvetica Neue",Helvetica,sans-serif;
+		font-weight: 300;
+		text-align: center;
+		border-radius: 50%;
+		border-width: 0;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    &:hover {
+        opacity: 1;
+        color: red;
+        transition: .3s;        
+
+    }
+}
+
+.form-popup__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-popup__text {
+    font-family: "Roboto-Medium";
+    margin-top: rem(30px);
+    margin-bottom: rem(20px);
+    text-align: center;
+
+    @include tablets() {
+        margin-bottom: rem(15px);
+    }
+}
+
+.form-popup__link {
+    padding: rem(8px) rem(20px);
+    color: #fff;
+    font-size: rem(14px);
+    font-family: "Roboto-Regular";    
+    background-color: $greenL;
+    border-radius: rem(5px);
+    transition: .3s;    
+
+    &:hover {
+        background-color: $greenD;
+        transition: .3s;
+    }
+    @include tablets() {
+        font-size: rem(15px);
+    }
+}

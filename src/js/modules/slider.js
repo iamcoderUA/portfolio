@@ -2,10 +2,10 @@ export default function slider() {
     'use strict';
   
     let slideItems = [
-      {imgUrl: '../img/content/slide-1.png', slideCaption: 'LoftSchool Школа онлайн образования', technology: 'HTML5, CSS3, БЭМ', slideUrl: 'https://vk.com'},
-      {imgUrl: '../img/content/slide-2.jpg', slideCaption: 'Сайт портфолио', technology: 'pug, sass, GRID, JavaScript, node.js, VueJS, Gulp, WebPack', slideUrl: 'https://vk.com'},
-      {imgUrl: '../img/content/slide-3.jpg', slideCaption: 'Корпоративный сайт', technology: 'pug, sass, JavaScript, node.js, VueJS, Gulp, WebPack', slideUrl: 'https://vk.com'},
-      {imgUrl: '../img/content/slide-4.png', slideCaption: 'Бургер лендинг', technology: 'HTML5, SASS, JavaScript, jQuery, AJAX, PHP, Gulp', slideUrl: 'https://vk.com'},
+      {imgUrl: '../img/content/slider-1.png', slideCaption: 'LoftSchool Школа онлайн образования', technology: 'HTML5, CSS3, БЭМ', slideUrl: 'https://vk.com'},
+      {imgUrl: '../img/content/slider-2.jpg', slideCaption: 'Сайт портфолио', technology: 'pug, sass, GRID, JavaScript, node.js, VueJS, Gulp, WebPack', slideUrl: 'https://vk.com'},
+      {imgUrl: '../img/content/slider-3.jpg', slideCaption: 'Корпоративный сайт', technology: 'pug, sass, JavaScript, node.js, VueJS, Gulp, WebPack', slideUrl: 'https://vk.com'},
+      {imgUrl: '../img/content/slider-4.png', slideCaption: 'Бургер лендинг', technology: 'HTML5, SASS, JavaScript, jQuery, AJAX, PHP, Gulp', slideUrl: 'https://vk.com'},
      ];
      let flagCreate = false;
      let isAnim = false;
@@ -117,7 +117,6 @@ export default function slider() {
   
     function translate(right, left, status) {
       const slideLength = left.children.length - 1;
-      console.log(slideLength);
       if (status === true) {
         left.appendChild(left.children[0]);
         right.insertBefore(right.children[slideLength], right.children[0]);
@@ -167,7 +166,6 @@ export default function slider() {
       }).then((status) => {
         let rslide = document.querySelector('.js-slidelist-right');
         let lslide = document.querySelector('.js-slidelist-left');
-        console.log(status);
         translate(rslide, lslide, status);
         for (let i = 0; i < rslide.children.length; i++) {
           rslide.children[i].removeAttribute('style');

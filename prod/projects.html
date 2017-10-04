@@ -147,10 +147,10 @@
 								</h2>
 								<form class="form" method="post">
 									<div class="form-row">
-										<input class="form-row__input" type="text" placeholder="Логин" name="login">
+										<input class="form-row__input" type="text" placeholder="Имя" name="name">
 									</div>
 									<div class="form-row">
-										<input class="form-row__input" type="password" placeholder="Пароль" name="pass">
+										<input class="form-row__input" type="email" placeholder="E-mail" name="email">
 									</div>
 									<div class="form-row">
 										<input class="form-row__textarea" type="textarea" placeholder="Ваше сообщение" name="message">
@@ -160,6 +160,24 @@
 										<input class="form-row__submit" type="reset" value="Очистить">
 									</div>
 								</form>
+							</div>
+						</div>
+						<div class="form-popup" id="succes">
+							<div class="form-popup__close close-btn" href=""></div>
+							<div class="form-popup__content">
+								<div class="form-popup__text">Сообщение отправлено!</div><a class="form-popup__link close-btn" href="">Закрыть</a>
+							</div>
+						</div>
+						<div class="form-popup" id="error">
+							<div class="form-popup__close close-btn" href=""></div>
+							<div class="form-popup__content">
+								<div class="form-popup__text error-message">Не все поля формы заполнены!</div><a class="form-popup__link close-btn" href="">Закрыть</a>
+							</div>
+						</div>
+						<div class="form-popup" id="error-server">
+							<div class="form-popup__close close-btn" href=""></div>
+							<div class="form-popup__content">
+								<div class="form-popup__text error-message">На сервере произошла ошибка!</div><a class="form-popup__link close-btn" href="">Закрыть</a>
 							</div>
 						</div>
 						<div class="back-arrow"><a class="next-arrow__but" href="#up">
