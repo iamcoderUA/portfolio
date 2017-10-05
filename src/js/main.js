@@ -126,7 +126,7 @@ if (document.getElementsByClassName('skills-list').length > 0) {
 if (document.getElementsByClassName('feed-form').length > 0) {
 	const valid = formValid();
 	const form = document.querySelector('.form');	
-	const submitBtn = document.querySelector('.form-row__homelink');
+	const submitBtn = document.querySelector('.form-row__submit');
 
 	form.onsubmit = function(e) {
 		e.preventDefault();

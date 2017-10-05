@@ -71,7 +71,7 @@
     text-align: center;    
 }
 
-.form-row__homelink {
+.form-row__submit {
     width: 50%;
     padding: rem(13px) 0;
     font-family: "Roboto-Regular";
@@ -89,7 +89,7 @@
     }
 }
 
-.form-row__submit {
+.form-row__clean {
     width: 50%;
     padding: rem(13px) 0;
     font-family: "Roboto-Regular";
@@ -98,7 +98,11 @@
     cursor: pointer;
     background-color: $greenL;
     border-bottom-right-radius: rem(5px); 
-    transition: background-color 0.3s; 
+    transition: background-color 0.3s;
+    
+    &:hover {
+        @extend .form-row__submit:hover;
+    }
 }
 
 .back-arrow {

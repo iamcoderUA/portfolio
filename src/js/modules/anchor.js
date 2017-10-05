@@ -10,7 +10,7 @@ export default function anchor() {
                         setTimeout(goUp, 20);
                         window.scrollBy(0, 30);
                         clearInterval(scrollInterval);
-                    } else if ((anchorTarget.getBoundingClientRect().top) < - 30) {
+                    } else if ((anchorTarget.getBoundingClientRect().top) < -30) {
                         setTimeout(goUp, 20);
                         window.scrollBy(0, -30);
                         clearInterval(scrollInterval);

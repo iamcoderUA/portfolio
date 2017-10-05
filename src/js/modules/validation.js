@@ -25,6 +25,7 @@ export default function formValid() {
                         popBtns[i].addEventListener('click', function (e) {
                             e.preventDefault();
                             error.classList.remove('active');
+                            
                             inputs.forEach(function(item) {
                                 item.style.border = 'none';
                             })
