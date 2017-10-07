@@ -18,14 +18,13 @@ export default function blogMenu() {
 
     return {
         menuScroll() {
-            if (blogNav.getBoundingClientRect().top < 20 ) {
+            if (blogNav.getBoundingClientRect().top < 20) {
                 navList.classList.add('active');
             } else if (blogNav.getBoundingClientRect().top > 20) {
                 navList.classList.remove('active');
             }
         },
         menuData() {
-
             for (let i = 0; i < navLength; i++) {
                 if ((articleItems[i].getBoundingClientRect().top - 200) < 0 && (articleItems[i].getBoundingClientRect().bottom - 200 ) > 0) {
                     if (navItems[i].getAttribute('data-name') === articleItems[i].getAttribute('data-name')) {
@@ -57,7 +56,7 @@ export default function blogMenu() {
         menuTablets() {
             if (!blogMenu.classList.contains('active')) {
                 blogMenu.classList.add('active');
-                if (pageYOffset <= 600) {
+                if (window.pageYOffset <= 600) {
                     navList.children[0].classList.add('active');                    
                 }
             } else {

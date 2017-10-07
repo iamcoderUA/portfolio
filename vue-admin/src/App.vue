@@ -1,9 +1,18 @@
 <template lang="pug">
   #app
-    hello
+    .header
+      app-header
+    .tabs
+      app-tabs
+    .content
+      router-view
+
 </template>
 
 <script>
+import appHeader from './components/header';
+import appTabs from './components/tabs';
+import appContent from './components/about';
 
 export default {
   name: 'app',
@@ -13,36 +22,24 @@ export default {
     }
   },
   components: {
-    hello: require('./components/Hello')
+    appHeader,
+    appTabs,
   }
 }
 </script>
 
 <style lang="scss">
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-h1, h2 {
-  font-weight: normal;
+.content {
+  flex: 1;
+  background: url(~img/bg_index.jpg) center center no-repeat;
+  background-size: cover;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
 </style>
