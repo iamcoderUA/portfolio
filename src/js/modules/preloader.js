@@ -42,7 +42,7 @@ export default function preloader() {
                             if (Math.ceil(progress) === 100) {
                                 resolve();
                             }
-                        }
+                        };
                     }
                 }
              }).then(() => preloadBg.style.display = "none");

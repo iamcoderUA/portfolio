@@ -1,0 +1,76 @@
+extends ../template
+
+block content
+    .wrapper
+        .preloader
+            svg.preloader__svg
+                <circle class="preloader__svg-first" opacity="0.4" fill="none" stroke-width="4" stroke-miterlimit="10" enable-background="new" cx="72" cy="71.999" r="70"/>
+                <circle class="preloader__svg-sec" opacity="0.7" fill="none" stroke-width="3.8938" stroke-miterlimit="10" enable-background="new" cx="72" cy="72" r="55"/>
+                <circle class="preloader__svg-third" fill="none" stroke-width="4" stroke-miterlimit="10" cx="72" cy="72" r="40"/>
+            span.preloader__text
+        .parallax-mouse
+            .parallax-mouse__layer.layer8(style='background-image: url(img/bg/Layer_8-min.png);')
+            .parallax-mouse__layer.layer7(style='background-image: url(img/bg/Layer_7-min.png);')
+            .parallax-mouse__layer.layer6(style='background-image: url(img/bg/Layer_6-min.png);')
+            .parallax-mouse__layer.layer4(style='background-image: url(img/bg/Layer_4-min.png);')
+            .parallax-mouse__layer.layer2(style='background-image: url(img/bg/Layer_2-min.png);')
+            .parallax-mouse__layer.layer1(style='background-image: url(img/bg/Layer_1-min.png);')
+            .parallax-mouse__layer.layer9(style='background-image: url(img/bg/sky-min.png);')
+            //- .parallax-mouse__layer.layer10(style='background-image: url(img/bg/cloud_1-min.png);')
+            //- .parallax-mouse__layer.layer11(style='background-image: url(img/bg/cloud_2-min.png);')
+        section.welcome-block
+            .welcome-block__button
+                a.welcome-block__link Авторизоваться
+            .welcome-container
+                .welcome-container__front
+                    .front-info
+                        .front-info__photo(style="background-image: url(img/content/ava_index.jpg);")
+                        .front-info__name Cтанислав Михнев
+                        .front-info__capt Личный сайт Front-end разработчика
+                        .front-info__socials
+                            ul.front-info__list
+                                +socials("img/svg/sprite.min.svg#vk", 'https://www.vk.com')
+                                +socials("img/svg/sprite.min.svg#github", 'https://www.vk.com')
+                                +socials("img/svg/sprite.min.svg#in", 'https://www.vk.com')
+                    nav.front-nav
+                        ul.front-nav__list
+                            each href, title in indexMenu
+                                li.front-nav__item
+                                    a.front-nav__link(href=`${href}`)= title
+                .welcome-container__back
+                    .welcome-auth__capt авторизуйтесь
+                    form.welcome-auth__form(method="post")
+                        .welcome-auth__row
+                            input.welcome-auth__input(type="text" placeholder="Логин" name="login")                        
+                            .welcome-auth__input-img
+                                svg.welcome-auth__svg
+                                    use(xlink:href="img/svg/sprite.min.svg#login")
+                        .welcome-auth__row
+                            input.welcome-auth__input(type="password" placeholder="Пароль" name="pass")
+                            .welcome-auth__input-img
+                                svg.welcome-auth__svg
+                                    use(xlink:href="img/svg/sprite.min.svg#password")
+                        .welcome-auth__row
+                            label.welcome-auth__label
+                                input.welcome-auth__checkbox(type="checkbox" value="yes")
+                                .welcome-auth__shadow-check
+                                    svg.welcome-auth__shadow-svg
+                                        use(xlink:href="img/svg/sprite.min.svg#check")
+                                .welcome-auth__shadow-checkbox Я человек
+                        .welcome-auth__radio-row
+                            .welcome-auth__radio-capt Вы точно не робот?
+                            .welcome-auth__radio-content
+                                label.welcome-auth__radio-label
+                                    input.welcome-auth__radio(type="radio" name="value" value="yes")
+                                    .welcome-auth__radio-fake
+                                    .welcome-auth__radio-title Да
+                                label.welcome-auth__radio-label
+                                    input.welcome-auth__radio(type="radio" name="value" value="yes")
+                                    .welcome-auth__radio-fake
+                                    .welcome-auth__radio-title Не уверен
+                        .welcome-auth__but
+                            input.welcome-auth__homelink(type="reset" value="На главную")
+                            input.welcome-auth__submit(type="submit" value="Войти")
+            footer.welcome-block__footer
+                .welcome-block__text  © Михнев Станислав | создано с любовью | 2017
+    script(src='js/main.min.js')

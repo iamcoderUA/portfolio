@@ -1,7 +1,7 @@
 <template lang="pug">
     header
-        .title Панель администрирования
-        a(href="").logout Вернуться на сайт
+        .header-title Панель администрирования
+        a(href="/").logout Вернуться на сайт
 </template>
 
 
@@ -27,7 +27,8 @@ header {
 .logout {
     font-family: "Roboto-Medium";
     font-size: rem(16px);
-    color: #fff;    
+    color: #fff;
+    text-decoration: underline;
 }
 
 

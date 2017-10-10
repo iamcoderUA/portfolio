@@ -4,9 +4,13 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 const about = require('./components/about').default;
+const blog = require('./components/blog').default;
+const works = require('./components/works').default;
 
 const routes = [
-  { path: '/', component: about },
+  { path: '/admin', component: about },
+  { path: '/blog', component: blog },
+  { path: '/works', component: works },
 
 ];
 

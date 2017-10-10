@@ -40,6 +40,7 @@ export default {
   flex: 1;
   background: url(~img/bg_index.jpg) center center no-repeat;
   background-size: cover;
+  padding: rem(45px) rem(30px);
 }
 
 </style>

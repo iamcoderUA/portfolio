@@ -1,0 +1,5 @@
+.navigation
+    ul.navigation__list
+        each href, title in links
+            li.navigation__item
+                a.navigation__link(href=`${href}`)= title

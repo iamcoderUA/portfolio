@@ -1,5 +1,5 @@
-let path = require('path');
-let webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: {
@@ -7,7 +7,7 @@ module.exports = {
     styles: './src/styles/index.js',
   },
   output: {
-    path: path.resolve(__dirname, './dist'),
+    path: path.resolve(__dirname, '../myapp/public/dist'),
     publicPath: '/dist/',
     filename: '[name].bundle.js',
   },
@@ -24,6 +24,7 @@ module.exports = {
             scss: [
               'vue-style-loader',
               'css-loader',
+              'svg-fill-loader/encodeSharp',
               'sass-loader',
               {
                 loader: 'sass-resources-loader',
@@ -50,7 +51,23 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.svg$/,
+        use: [
+          'file-loader',
+          {
+            loader: 'svg-fill-loader?fill=white',
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]?[hash]',
+        },
+      },
+      {
+        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]',

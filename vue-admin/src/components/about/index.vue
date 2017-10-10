@@ -1,6 +1,7 @@
 <template lang="pug">
-  .about
-    h1.title Страница &#171Обо мне&#187
+.about
+  .about-skills
+    h1.title-main Страница &#171Обо мне&#187
     .skills-list(v-for="(skillType, index) in skillsTypes")
       skills-list(
         :skills="skills"
@@ -9,7 +10,8 @@
         @addSkill="addSkill"
         @removeSkill="removeSkill"
       )
-
+  .about-link
+    a(href="").save-btn Сохранить
 </template>
 
 <script>
@@ -20,7 +22,7 @@ import { mapActions, mapGetters, mapMutations } from 'vuex';
 export default {
   data() {
     return {
-      skillsTypes: ['Frontend', 'Workflow', 'Backend']
+      skillsTypes: ['Frontend', 'Backend', 'Workflow']
     }
   },
   computed: {
@@ -47,7 +49,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+  .about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .about-skills {
+    margin-bottom: rem(30px);
+  }
 
+  .skills-list {
+    width: 40%;
+    max-width: 50%;
+    display: inline-flex;
+  }
 
+  .skills-list {
+    margin-bottom: rem(20px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 </style>
 

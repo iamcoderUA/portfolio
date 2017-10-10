@@ -1,0 +1,34 @@
+.title-main {
+    font-family: "Roboto-Medium";
+    font-size: 21px;
+    color: #455a64;
+    margin-bottom: 35px;
+}
+
+.title-block {
+    font-family: "Roboto-Medium";
+    font-size: 16px;
+    color: #455a64;
+}
+
+.save-btn {
+    display: inline-flex;
+    font-family: "Roboto-Medium";
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 15px;
+    background-color: #00bfa5;
+    border-radius: 5px;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.input-block {
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+}

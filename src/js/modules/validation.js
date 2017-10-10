@@ -1,5 +1,5 @@
 export default function formValid() {
-    const error = document.getElementById('error');
+    const error = document.getElementById('errorr');
     const popBtns = error.getElementsByClassName('close-btn');
     const form = document.querySelector('.form');
     const rows = form.getElementsByClassName('form-row');
@@ -32,7 +32,7 @@ export default function formValid() {
                         })
                     };
                 } else {
-
+                    this.submitForm();
                 }
             }
         }

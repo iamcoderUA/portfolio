@@ -1,3 +1,6 @@
+include mixins/variables
+
+//- Header
 mixin header(path, name, text, className)
     .header-bg
         .header-bg__pic
@@ -32,6 +35,7 @@ mixin socials(path, link)
             svg.front-info__svg
                 use(xlink:href=path)
 
+//- Blog page
 mixin blog-nav(title)
     li.blog-nav__item
         a(href="#")=title
@@ -43,6 +47,7 @@ mixin blog-info(title, date, text, text2)
         p=text
         p=text2
 
+//- About page
 mixin skills-list(skill, text, count)
         li.skills-list__item
             .skills-row
@@ -56,6 +61,14 @@ mixin skills-list(skill, text, count)
                             .skills-row__text= text[i]
                     - }
 
+mixin map-list(path, link, text, newPage)
+        li.map-list__item
+            a.map-list__link(href=link target=newPage)
+                svg.map-list__icon
+                    use(xlink:href=path)
+                .map-list__text=text
+
+//- Projects page
 mixin feed-list(feed, avatar, name, text)
         li.feed-list__item
             .feed-list__text=feed
@@ -66,47 +79,27 @@ mixin feed-list(feed, avatar, name, text)
                     .feed-list__name=name
                     .feed-list__occupation=text
 
-mixin map-list(path, link, text, newPage)
-        li.map-list__item
-            a.map-list__link(href=link target=newPage)
-                svg.map-list__icon
-                    use(xlink:href=path)
-                .map-list__text=text
-
-mixin portfolioText(caption, technology, linkPath)
-    li.portfolio-slider__text-item
-        .portfolio-slider__text-capt
-            .title-block=caption
-        .portfolio-slider__text-tech=technology
-        a.portfolio-text__but(href="#")
-            | Просмотреть сайт
-            svg.portfolio-slider__text-svg
-                use(xlink:href=linkPath)
-
-mixin portfolioLeftSlide(slidePath)
-    li.slide-left__item
-        img.slide-left__img(src=slidePath)
-
-mixin portfolioRightSlide(slidePath)
-    li.slide-right__item
-        img.slide-right__img(src=slidePath)
-
+//- Footer
 mixin footer
     .footer-top
         nav.foot-nav
             ul.foot-nav__list
-                li.foot-nav__item
-                    a.foot-nav__link(href="projects.html") Мои работы
-                        .foot-nav__link-box
-                li.foot-nav__item
-                    a.foot-nav__link(href="about.html") Обо мне
-                        .foot-nav__link-box
-                li.foot-nav__item
-                    a.foot-nav__link(href="blog.html") Блог
-                        .foot-nav__link-box                        
-                li.foot-nav__item
-                    a.foot-nav__link(href="index.html") Авторизация
-                        .foot-nav__link-box                    
+                each href, title in links
+                    li.foot-nav__item
+                        a.foot-nav__link(href=`${href}`)= title
+                            .foot-nav__link-box
+                //- li.foot-nav__item
+                //-     a.foot-nav__link(href="projects.html") Мои работы
+                //-         .foot-nav__link-box
+                //- li.foot-nav__item
+                //-     a.foot-nav__link(href="about.html") Обо мне
+                //-         .foot-nav__link-box
+                //- li.foot-nav__item
+                //-     a.foot-nav__link(href="blog.html") Блог
+                //-         .foot-nav__link-box                        
+                //- li.foot-nav__item
+                //-     a.foot-nav__link(href="index.html") Авторизация
+                //-         .foot-nav__link-box                    
         .foot-socials
             ul.foot-soc__list
                 +footSocials("img/svg/sprite.min.svg#vk", "img/svg/sprite.min.svg#vk_round", "https://vk.com/id10661167", "30", "30", "10", "10")
