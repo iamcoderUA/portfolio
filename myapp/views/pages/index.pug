@@ -39,14 +39,16 @@ block content
                                     a.front-nav__link(href=`${href}`)= title
                 .welcome-container__back
                     .welcome-auth__capt авторизуйтесь
-                    form.welcome-auth__form(method="post")
+                    form.welcome-auth__form(action='/' method="POST")
                         .welcome-auth__row
                             input.welcome-auth__input(type="text" placeholder="Логин" name="login")                        
                             .welcome-auth__input-img
                                 svg.welcome-auth__svg
                                     use(xlink:href="img/svg/sprite.min.svg#login")
+                        if (msg)
+                            .status=msg
                         .welcome-auth__row
-                            input.welcome-auth__input(type="password" placeholder="Пароль" name="pass")
+                            input.welcome-auth__input(type="password" placeholder="Пароль" name="password")
                             .welcome-auth__input-img
                                 svg.welcome-auth__svg
                                     use(xlink:href="img/svg/sprite.min.svg#password")
