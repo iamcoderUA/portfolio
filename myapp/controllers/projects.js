@@ -36,4 +36,4 @@ module.exports.sendEmail = function(req, res) {
     }
     res.redirect('/projects?msg=Письмо успешно отправлено');
   });
-}
+};

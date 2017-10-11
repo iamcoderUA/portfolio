@@ -11,10 +11,17 @@ const ctrlAdmin = require('../controllers/admin');
 
 /* GET home page. */
 router.get('/', ctrlHome.getIndex);
+router.post('/', ctrlHome.getIndexAuth);
+
 router.get('/projects', ctrlProjects.getProjects);
 router.post('/contact', ctrlProjects.sendEmail);
+
 router.get('/about', ctrlAbout.getAbout);
 router.get('/blog', ctrlBlog.getBlog);
+
 router.get('/admin', ctrlAdmin.getAdmin);
+router.post('/works', ctrlAdmin.uploadProject);
+router.post('/articles', ctrlAdmin.addArticle);
+
 
 module.exports = router;
