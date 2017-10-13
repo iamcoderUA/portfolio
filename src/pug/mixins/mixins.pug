@@ -1,5 +1,3 @@
-include mixins/variables
-
 //- Header
 mixin header(path, name, text, className)
     .header-bg
@@ -84,22 +82,18 @@ mixin footer
     .footer-top
         nav.foot-nav
             ul.foot-nav__list
-                each href, title in links
-                    li.foot-nav__item
-                        a.foot-nav__link(href=`${href}`)= title
-                            .foot-nav__link-box
-                //- li.foot-nav__item
-                //-     a.foot-nav__link(href="projects.html") Мои работы
-                //-         .foot-nav__link-box
-                //- li.foot-nav__item
-                //-     a.foot-nav__link(href="about.html") Обо мне
-                //-         .foot-nav__link-box
-                //- li.foot-nav__item
-                //-     a.foot-nav__link(href="blog.html") Блог
-                //-         .foot-nav__link-box                        
-                //- li.foot-nav__item
-                //-     a.foot-nav__link(href="index.html") Авторизация
-                //-         .foot-nav__link-box                    
+                li.foot-nav__item
+                    a.foot-nav__link(href="projects.html") Мои работы
+                        .foot-nav__link-box
+                li.foot-nav__item
+                    a.foot-nav__link(href="about.html") Обо мне
+                        .foot-nav__link-box
+                li.foot-nav__item
+                    a.foot-nav__link(href="blog.html") Блог
+                        .foot-nav__link-box                        
+                li.foot-nav__item
+                    a.foot-nav__link(href="index.html") Авторизация
+                        .foot-nav__link-box                    
         .foot-socials
             ul.foot-soc__list
                 +footSocials("img/svg/sprite.min.svg#vk", "img/svg/sprite.min.svg#vk_round", "https://vk.com/id10661167", "30", "30", "10", "10")

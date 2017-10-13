@@ -73,6 +73,11 @@ block content
                         .welcome-auth__but
                             input.welcome-auth__homelink(type="reset" value="На главную")
                             input.welcome-auth__submit(type="submit" value="Войти")
+            .form-popup#errorr
+                        .form-popup__close(href='').close-btn
+                        .form-popup__content
+                            .form-popup__text Не все поля формы заполнены!
+                            a.form-popup__link(href='').close-btn Закрыть
             footer.welcome-block__footer
                 .welcome-block__text  © Михнев Станислав | создано с любовью | 2017
     script(src='js/main.min.js')

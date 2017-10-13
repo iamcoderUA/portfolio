@@ -9,7 +9,8 @@ module.exports.getProjects = function (req, res) {
 };
 
 module.exports.sendEmail = function(req, res) {
-  //требуем наличия имени, обратной почты и текста
+
+//требуем наличия имени, обратной почты и текста
   if (!req.body.name || !req.body.email || !req.body.text) {
     //если что-либо не указано - сообщаем об этом
     return res.redirect('/projects?msg=Не все поля формы заполнены!');

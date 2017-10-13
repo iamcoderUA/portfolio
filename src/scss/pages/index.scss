@@ -532,6 +532,12 @@ a.welcome-block__link {
     }
 }
 
+.status {
+    text-align: center;
+    color: red;
+    margin-top: rem(10px);
+}
+
 .welcome-auth__submit {
     @extend .welcome-auth__homelink;    
     border-left: rem(1px) solid #fff;
