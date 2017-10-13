@@ -20,7 +20,6 @@ router.get('/about', ctrlAbout.getAbout);
 router.get('/blog', ctrlBlog.getBlog);
 
 router.get('/admin', ctrlAdmin.getAdmin);
-router.post('/works', ctrlAdmin.uploadProject);
 router.post('/articles', ctrlAdmin.addArticle);
 
 

@@ -1,12 +1,13 @@
 export default function slider() {
     'use strict';
-  
+
     let slideItems = [
       {imgUrl: '../img/content/slider-1.png', slideCaption: 'LoftSchool Школа онлайн образования', technology: 'HTML5, CSS3, БЭМ', slideUrl: 'https://vk.com'},
       {imgUrl: '../img/content/slider-2.jpg', slideCaption: 'Сайт портфолио', technology: 'pug, sass, GRID, JavaScript, node.js, VueJS, Gulp, WebPack', slideUrl: 'https://vk.com'},
       {imgUrl: '../img/content/slider-3.jpg', slideCaption: 'Корпоративный сайт', technology: 'pug, sass, JavaScript, node.js, VueJS, Gulp, WebPack', slideUrl: 'https://vk.com'},
       {imgUrl: '../img/content/slider-4.png', slideCaption: 'Бургер лендинг', technology: 'HTML5, SASS, JavaScript, jQuery, AJAX, PHP, Gulp', slideUrl: 'https://vk.com'},
      ];
+
      let flagCreate = false;
      let isAnim = false;
      let counter = 0;

@@ -6,6 +6,7 @@ Vue.use(Vuex);
 Vue.use(VueResource);
 
 import skills from './modules/skills';
+import works from './modules/works'
 
 export const store = new Vuex.Store({
     getters: {
@@ -13,5 +14,6 @@ export const store = new Vuex.Store({
     },
     modules: {
         skills,
+        works
     },
 });

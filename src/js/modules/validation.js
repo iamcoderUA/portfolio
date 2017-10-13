@@ -9,7 +9,7 @@ export default function formValid() {
     for (let i = 0; i < rows.length; i++) {
         inputs.push(rows[i].children[0]);
     }
-
+    
     return {
         submitForm() {
             for (let i = 0; i < inputs.length; i++) {
@@ -17,22 +17,20 @@ export default function formValid() {
                     if (inputs[i] === inputs[1]) {
                         regexp.test(inputs[1]);
                     }
-
                     inputs[i].style.border = '1px solid red';
                     error.classList.add('active');
 
-                    for (let i = 0; i < popBtns.length; i++) {
-                        popBtns[i].addEventListener('click', function (e) {
+                    for (let j = 0; j < popBtns.length; j++) {
+                        popBtns[j].addEventListener('click', function (e) {
                             e.preventDefault();
                             error.classList.remove('active');
-                            
                             inputs.forEach(function(item) {
                                 item.style.border = 'none';
                             })
-                        })
+                        });
                     };
                 } else {
-                    this.submitForm();
+                    form.submit();
                 }
             }
         }

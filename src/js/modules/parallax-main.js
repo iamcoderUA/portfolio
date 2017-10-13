@@ -15,7 +15,6 @@ export default function parallaxMain() {
                 positionX = e.pageX / -speed + 'px';
                 positionY = e.pageY / -speed + 'px';
                 parallaxLayer[i].style.transform = 'translate3d(' + positionX + ',' + positionY + ',0)';
-                console.log(positionX, positionY);                  
                 speed -= 15;
             }
         },
