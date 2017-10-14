@@ -115,21 +115,16 @@ if (document.getElementsByClassName('next-arrow__but').length > 0) {
 	}
 }
 
-// Skills-Scroll
+// Skills-On-Scroll
 if (document.getElementsByClassName('skills-list').length > 0) {
 	const skillsScroll = skills();
     document.onscroll = function () {
 		skillsScroll.skillsAnim();
 	};
-};
+}
+
 // Form Validation
 if (document.getElementsByClassName('feed-form').length > 0) {
 	const valid = formValid();
-	const form = document.querySelector('.form');
-
-	form.onsubmit = function(e) {
-		e.preventDefault();
-		valid.submitForm();
-	};
+	valid.submitInit();
 }
-

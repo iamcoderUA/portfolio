@@ -56,22 +56,20 @@ block content
                         .feed-form__wrapper
                             h2.feed-form__capt
                                 .title-block Связаться со мной
-                                if(msg)
-                                    .status=msg
-                            form.form(action ='/contact' name="person" method="POST" enctype="multipart/form-data")
+                            form.form(name="contact" method="POST" novalidate)
                                 .form-row
                                     input.form-row__input(type="text" placeholder="Имя" name="name")
                                 .form-row
                                     input.form-row__input(type="email" placeholder="E-mail" name="email")
                                 .form-row
-                                        input.form-row__textarea(type="textarea" placeholder="Ваше сообщение" name="text")
+                                    input.form-row__input(type="textarea" placeholder="Ваше сообщение" name="text").form-row__textarea
                                 .form-but
                                     input.form-row__submit(type="submit" value="Отправить")
                                     input.form-row__clean(type="reset" value="Очистить")
                     .form-popup#errorr
                         .form-popup__close(href='').close-btn
                         .form-popup__content
-                            .form-popup__text Не все поля формы заполнены!
+                            .form-popup__text Не все поля заполнены
                             a.form-popup__link(href='').close-btn Закрыть
                     .back-arrow
                         a.next-arrow__but(href="#up")

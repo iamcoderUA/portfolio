@@ -13,7 +13,7 @@ module.exports.sendEmail = function(req, res) {
 //требуем наличия имени, обратной почты и текста
   if (!req.body.name || !req.body.email || !req.body.text) {
     //если что-либо не указано - сообщаем об этом
-    return res.redirect('/projects?msg=Не все поля формы заполнены!');
+    res.status(404).json({message: 'Не все поля заполнены'});    
   }
 
 //инициализируем модуль для отправки писем и указываем данные из конфига
@@ -33,8 +33,8 @@ module.exports.sendEmail = function(req, res) {
   transporter.sendMail(mailOptions, function (error, info) {
     //если есть ошибки при отправке - сообщаем об этом
     if (error) {
-      return res.redirect('/projects?msg=При отправке письма произошла ошибка');
+    res.status(500).json({message: 'Произошла ошибка на сервере'});    
     }
-    res.redirect('/projects?msg=Письмо успешно отправлено');
+    res.status(301).json({message: 'Письмо успешно отправлено'});
   });
 };
