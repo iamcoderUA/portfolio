@@ -1,5 +1,6 @@
 const nodemailer = require('nodemailer');
 const config = require('../config.json');
+const mongoose = require('mongoose');
 
 module.exports.getProjects = function (req, res) {
   res.render('pages/projects', {
@@ -38,3 +39,23 @@ module.exports.sendEmail = function(req, res) {
     res.status(301).json({message: 'Письмо успешно отправлено'});
   });
 };
+
+
+module.exports.getWork = function (req, res) {
+  const defWork = {
+    name: 'Project-one',
+    tech: 'html',
+    link: 'https://vk.com',
+    path: '../img/content/ava_about.jpg'
+  }
+
+  const Model = mongoose.model('works');
+  Model.find().then(items => {
+    if (!items.length) {
+      res.status(200).json(defWork);
+    } else {
+      res.status(200).json(items);
+    }
+  })
+
+}

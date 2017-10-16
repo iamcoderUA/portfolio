@@ -1,12 +1,37 @@
 export default function slider() {
     'use strict';
 
-    let slideItems = [
-      {imgUrl: '../img/content/slider-1.png', slideCaption: 'LoftSchool Школа онлайн образования', technology: 'HTML5, CSS3, БЭМ', slideUrl: 'https://vk.com'},
-      {imgUrl: '../img/content/slider-2.jpg', slideCaption: 'Сайт портфолио', technology: 'pug, sass, GRID, JavaScript, node.js, VueJS, Gulp, WebPack', slideUrl: 'https://vk.com'},
-      {imgUrl: '../img/content/slider-3.jpg', slideCaption: 'Корпоративный сайт', technology: 'pug, sass, JavaScript, node.js, VueJS, Gulp, WebPack', slideUrl: 'https://vk.com'},
-      {imgUrl: '../img/content/slider-4.png', slideCaption: 'Бургер лендинг', technology: 'HTML5, SASS, JavaScript, jQuery, AJAX, PHP, Gulp', slideUrl: 'https://vk.com'},
+    const slideItems = [
+      { imgUrl: '../img/content/slider-1.jpg', slideCaption: 'Корпоративный сайт фитнес-центра &#171Афродита#187', technology: 'HTML5, CSS3, БЭМ, Git', slideUrl: 'http://fitness.iamcoder.in.ua' },
+      { imgUrl: '../img/content/slider-4.jpg', slideCaption: 'Лендинг ресторана бургеров', technology: 'pug, sass, JavaScript, jQuery, AJAX, Gulp4, WebPack3, Git', slideUrl: 'http://burger.iamcoder.in.ua' },
+      { imgUrl: '../img/content/slider-3.jpg', slideCaption: 'Сайт-визитка психолога-психоаналитика', technology: 'pug, sass, VanillaJS, VueJS, AJAX, PHP, MongoDB, WebPack3, Git', slideUrl: 'http://lagutina.com.ua' },
+      { imgUrl: '../img/content/slider-4.jpg', slideCaption: 'Мой сайт портфолио', technology: 'pug, sass, VanillaJS, AJAX, VueJS, node.js, MongoDB, Gulp4, WebPack3, Git', slideUrl: 'https://iamcoder.in.ua' },
      ];
+
+  function getJSON() {
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', '/getWork', false);
+    xhr.send();
+    if (xhr.status !== 200) {
+      console.log(`${xhr.status} : ${xhr.statusText}`);
+    } else {
+      console.log(`${xhr.status} : ${xhr.statusText}`);
+      const data = JSON.parse(xhr.responseText);
+      for (let i = 0; i < data.length; i++) {
+          const createWorkElem = {
+          imgUrl: data[i].path,
+          slideCaption: data[i].name,
+          technology: data[i].tech,
+          slideUrl: data[i].link,
+        };
+        slideItems.push(createWorkElem);
+      }
+    }
+
+      function newFunction() {
+          return console.log;
+      }
+  }
 
      let flagCreate = false;
      let isAnim = false;
@@ -177,6 +202,7 @@ export default function slider() {
   
     return {
       sliderInit(elem) {
+        getJSON();
         classListAdd(elem);
       },
       slideNav() {

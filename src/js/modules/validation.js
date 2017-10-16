@@ -46,7 +46,7 @@ export default function formValid() {
         xhr.setRequestHeader('Content-Type', 'application/json');
         xhr.send(jsonData);
         xhr.onreadystatechange = function () {
-            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status !== 301) {
+            if (xhr.status !== 301) {
                 console.log(`${xhr.status} : ${xhr.statusText}`);                               
                 error.classList.add('active');
                 popText.textContent = 'Произошла ошибка на сервере';
