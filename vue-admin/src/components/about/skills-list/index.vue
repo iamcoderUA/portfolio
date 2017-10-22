@@ -66,9 +66,9 @@ export default {
             switch(skillType) {
                 case 'Frontend':
                     return 1
-                case 'Workflow':
-                    return 2
                 case 'Backend':
+                    return 2
+                case 'Workflow':
                     return 3
             }
         }
@@ -76,7 +76,7 @@ export default {
     components: {
         skillItem
     }
-    }
+}
 </script>
 
 <style lang="scss" scoped>

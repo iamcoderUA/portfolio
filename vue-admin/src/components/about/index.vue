@@ -11,7 +11,7 @@
         @removeSkill="removeSkill"
       )
   .about-link
-    a(href="").save-btn Сохранить
+    a(href="" @click.prevent="saveSkill").save-btn Сохранить
 </template>
 
 <script>
@@ -30,7 +30,7 @@ export default {
   },
   methods: {
     ...mapActions(['fetchSkills']),
-    ...mapMutations(['addNewSkill', 'removeSavedSkill']),
+    ...mapMutations(['addNewSkill', 'removeSavedSkill', 'saveSkill']),
     addSkill(skill) {
       this.addNewSkill(skill);
     },

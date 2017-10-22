@@ -4,13 +4,13 @@
     td
      input(
          type=text
-         :value="skill.percents"
+         v-model="skill.percents"
     ).skills-value
     td %
     td
         button(
             type="button"
-            @click="removeSkill(skill.id)"
+            @click="removeSkill(skill.id, $event)"
         ).remove-btn Удалить
     
 </template>
@@ -23,7 +23,7 @@ export default {
     methods: {
         removeSkill(id) {
             this.$emit('removeSkill', id);
-        }
+        },
     }
 
 }

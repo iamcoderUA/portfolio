@@ -2,10 +2,10 @@ export default function slider() {
     'use strict';
 
     const slideItems = [
-      { imgUrl: '../img/content/slider-1.jpg', slideCaption: 'Корпоративный сайт фитнес-центра &#171Афродита#187', technology: 'HTML5, CSS3, БЭМ, Git', slideUrl: 'http://fitness.iamcoder.in.ua' },
-      { imgUrl: '../img/content/slider-4.jpg', slideCaption: 'Лендинг ресторана бургеров', technology: 'pug, sass, JavaScript, jQuery, AJAX, Gulp4, WebPack3, Git', slideUrl: 'http://burger.iamcoder.in.ua' },
+      { imgUrl: '../img/content/slider-1.png', slideCaption: 'Корпоративный сайт фитнес-центра', technology: 'HTML5, CSS3, БЭМ, Git', slideUrl: 'http://fitness.iamcoder.in.ua' },
+      { imgUrl: '../img/content/slider-2.jpg', slideCaption: 'Лендинг ресторана бургеров', technology: 'pug, sass, JavaScript, jQuery, AJAX, Gulp4, WebPack3, Git', slideUrl: 'http://burger.iamcoder.in.ua' },
       { imgUrl: '../img/content/slider-3.jpg', slideCaption: 'Сайт-визитка психолога-психоаналитика', technology: 'pug, sass, VanillaJS, VueJS, AJAX, PHP, MongoDB, WebPack3, Git', slideUrl: 'http://lagutina.com.ua' },
-      { imgUrl: '../img/content/slider-4.jpg', slideCaption: 'Мой сайт портфолио', technology: 'pug, sass, VanillaJS, AJAX, VueJS, node.js, MongoDB, Gulp4, WebPack3, Git', slideUrl: 'https://iamcoder.in.ua' },
+      { imgUrl: '../img/content/slider-4.png', slideCaption: 'Мой сайт портфолио', technology: 'pug, sass, VanillaJS, AJAX, VueJS, node.js, MongoDB, Gulp4, WebPack3, Git', slideUrl: 'https://iamcoder.in.ua' },
      ];
 
   function getJSON() {
