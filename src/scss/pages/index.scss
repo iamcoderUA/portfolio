@@ -102,7 +102,7 @@
   }
 
   .layer9 {
-    bottom: -60%;      
+    bottom: -70%;      
   }
 
 .welcome-block {
@@ -222,6 +222,12 @@ a.welcome-block__link {
     color: #455a64;
     opacity: .8;
     margin-bottom: rem(30px);
+    visibility: visible;    
+    transition: .3s;
+    &.active {
+        transition: 1s;
+        visibility: hidden;
+    }
 }
 
 .front-info__item {
@@ -311,6 +317,8 @@ a.welcome-block__link {
 
 .welcome-auth__capt {
     position: relative;
+    display: flex;
+    justify-content: center;
     font-family: "Bernier";
     font-size: rem(35px);
     color: #455a64;
@@ -336,6 +344,16 @@ a.welcome-block__link {
     }
 }
 
+.welcome-auth__message {
+    display: none;
+    color: red;
+    font-family: "Roboto-Medium";
+    font-size:rem(16px);
+    &.active {
+        display: block;
+    }
+    
+}
 .welcome-auth__form {
     width: 100%;
     font-family: "Roboto-Light";
@@ -448,7 +466,6 @@ a.welcome-block__link {
     display: flex;
     justify-content: center;
     margin-top: rem(15px);
-    // text-align: center;
 }
 
 .welcome-auth__radio-container {
@@ -487,7 +504,7 @@ a.welcome-block__link {
     width: 1.25rem;
     height: 1.25rem;
     border-radius: 50%;
-    background-color: rgb(240, 239, 233);
+    background-color: #fff;
     position: relative;
     &:after {
         content: "";

@@ -16,8 +16,6 @@ block content
             .parallax-mouse__layer.layer2(style='background-image: url(img/bg/Layer_2-min.png);')
             .parallax-mouse__layer.layer1(style='background-image: url(img/bg/Layer_1-min.png);')
             .parallax-mouse__layer.layer9(style='background-image: url(img/bg/sky-min.png);')
-            //- .parallax-mouse__layer.layer10(style='background-image: url(img/bg/cloud_1-min.png);')
-            //- .parallax-mouse__layer.layer11(style='background-image: url(img/bg/cloud_2-min.png);')
         section.welcome-block
             .welcome-block__button
                 a.welcome-block__link Авторизоваться
@@ -30,7 +28,7 @@ block content
                         .front-info__socials
                             ul.front-info__list
                                 +socials("img/svg/sprite.min.svg#vk", 'https://www.vk.com')
-                                +socials("img/svg/sprite.min.svg#github", 'https://www.vk.com')
+                                +socials("img/svg/sprite.min.svg#github", 'https://www.github.com/iamcoderUA')
                                 +socials("img/svg/sprite.min.svg#in", 'https://www.vk.com')
                     nav.front-nav
                         ul.front-nav__list
@@ -39,14 +37,13 @@ block content
                                     a.front-nav__link(href=`${href}`)= title
                 .welcome-container__back
                     .welcome-auth__capt авторизуйтесь
-                    form.welcome-auth__form(action='/' method="POST")
+                    .welcome-auth__message
+                    form.welcome-auth__form(method="POST")
                         .welcome-auth__row
                             input.welcome-auth__input(type="text" placeholder="Логин" name="login")                        
                             .welcome-auth__input-img
                                 svg.welcome-auth__svg
                                     use(xlink:href="img/svg/sprite.min.svg#login")
-                        if (msg)
-                            .status=msg
                         .welcome-auth__row
                             input.welcome-auth__input(type="password" placeholder="Пароль" name="password")
                             .welcome-auth__input-img
@@ -66,18 +63,13 @@ block content
                                     input.welcome-auth__radio(type="radio" name="value" value="yes")
                                     .welcome-auth__radio-fake
                                     .welcome-auth__radio-title Да
-                                label.welcome-auth__radio-label
-                                    input.welcome-auth__radio(type="radio" name="value" value="yes")
+                                label.welcome-auth__radio-label#nochecked
+                                    input.welcome-auth__radio(type="radio" name="value" value="no")
                                     .welcome-auth__radio-fake
                                     .welcome-auth__radio-title Не уверен
                         .welcome-auth__but
                             input.welcome-auth__homelink(type="reset" value="На главную")
                             input.welcome-auth__submit(type="submit" value="Войти")
-            .form-popup#errorr
-                        .form-popup__close(href='').close-btn
-                        .form-popup__content
-                            .form-popup__text Не все поля формы заполнены!
-                            a.form-popup__link(href='').close-btn Закрыть
             footer.welcome-block__footer
                 .welcome-block__text  © Михнев Станислав | создано с любовью | 2017
     script(src='js/main.min.js')

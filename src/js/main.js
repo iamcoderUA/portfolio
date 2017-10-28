@@ -9,6 +9,7 @@ import blur from './modules/blur.js';
 import anchor from './modules/anchor.js';
 import skills from './modules/skills.js';
 import formValid from './modules/validation.js';
+import adminAuth from './modules/admin-auth.js';
 
 
 // Preloader
@@ -119,19 +120,15 @@ if (document.getElementsByClassName('next-arrow__but').length > 0) {
 if (document.getElementsByClassName('skills-list').length > 0) {
 	const skillsScroll = skills();
 	skillsScroll.skillsAnimateInit();
-	
-    // document.onscroll = function () {
-	// 	// skillsScroll.skillsRender();
-	// 	skillsScroll.skillsAnim();
-	// };
 }
-// if (document.readyState === 'complete') {
-// 	const skillsCreation = skills();
-// 	skillsCreation.skillsRender();
-// }
 
 // Form Validation
 if (document.getElementsByClassName('feed-form').length > 0) {
 	const valid = formValid();
 	valid.submitInit();
+}
+// Admin Authorization
+if (document.getElementsByClassName('welcome-auth__form').length > 0) {
+	const getAdmin = adminAuth();
+	getAdmin.authInit('.welcome-auth__form', '.welcome-auth__radio-label', 'nochecked');
 }
