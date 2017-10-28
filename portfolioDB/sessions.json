@@ -1,0 +1,10 @@
+{ 
+    "_id" : "3vHSmma4W8EgdtF-dAAxTkB6p13HawgP", 
+    "session" : "{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"isAdmin\":true}", 
+    "expires" : ISODate("2017-11-08T18:19:59.580+0000")
+}
+{ 
+    "_id" : "Dgt6GlpXKY7aUmC-n9GJR3L1z-9d-qWt", 
+    "session" : "{\"cookie\":{\"originalMaxAge\":null,\"expires\":null,\"httpOnly\":true,\"path\":\"/\"},\"isAdmin\":true}", 
+    "expires" : ISODate("2017-11-11T15:16:47.501+0000")
+}

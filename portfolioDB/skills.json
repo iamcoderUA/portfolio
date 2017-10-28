@@ -1,0 +1,77 @@
+{ 
+    "_id" : ObjectId("59ee3c4f8f16890ee4441543"), 
+    "name" : "HTML5, CSS3", 
+    "percents" : NumberInt(90), 
+    "type" : NumberInt(1), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ee3c4f8f16890ee4441544"), 
+    "name" : "PUG, SASS", 
+    "percents" : NumberInt(80), 
+    "type" : NumberInt(1), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ee3c4f8f16890ee4441547"), 
+    "name" : "Git", 
+    "percents" : NumberInt(70), 
+    "type" : NumberInt(3), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ee3c4f8f16890ee4441549"), 
+    "name" : "WebPack", 
+    "percents" : NumberInt(60), 
+    "type" : NumberInt(3), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ee3c4f8f16890ee444154a"), 
+    "name" : "PHP", 
+    "percents" : NumberInt(10), 
+    "type" : NumberInt(2), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ee3c4f8f16890ee444154c"), 
+    "name" : "node.js & npm", 
+    "percents" : NumberInt(30), 
+    "type" : NumberInt(2), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ee3c4f8f16890ee4441545"), 
+    "name" : "Vue.js", 
+    "percents" : NumberInt(40), 
+    "type" : NumberInt(1), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ee3c4f8f16890ee444154b"), 
+    "name" : "mySQL", 
+    "percents" : NumberInt(10), 
+    "type" : NumberInt(2), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ee3c4f8f16890ee4441546"), 
+    "name" : "JavaScript & jQuery", 
+    "percents" : NumberInt(50), 
+    "type" : NumberInt(1), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ee3c4f8f16890ee4441548"), 
+    "name" : "Gulp", 
+    "percents" : NumberInt(70), 
+    "type" : NumberInt(3), 
+    "__v" : NumberInt(0)
+}
+{ 
+    "_id" : ObjectId("59ee3c4f8f16890ee444154d"), 
+    "name" : "MongoDB", 
+    "percents" : NumberInt(20), 
+    "type" : NumberInt(2), 
+    "__v" : NumberInt(0)
+}
