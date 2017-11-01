@@ -2,6 +2,7 @@ const fs                        = require('fs');
 const path                      = require('path');
 const express                   = require('express');
 const MongoClient               = require("mongodb").MongoClient;
+const favicon                   = require("serve-favicon");
 const cookieParser              = require('cookie-parser');
 const logger                    = require('morgan');
 const bodyParser                = require('body-parser');
@@ -19,6 +20,8 @@ app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, '/public')));
 app.set('view engine', 'pug');
 
+app.use(favicon(path.join(__dirname, 'public', 'favicon.png')));
+
 const index = require('./routes/index');
 const indexApi = require('./api/routes/index');
 
@@ -32,7 +35,7 @@ app.use(session({
   cookie: {
     path: '/',
     httpOnly: true,
-    maxAge: null
+    maxAge: null,
   },
   saveUninitialized: false,
   resave: false,

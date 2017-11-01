@@ -1,7 +1,7 @@
 const http = require('request');
 
 const apiOptions = {
-    server: 'http://localhost:80',
+    server: 'http://31.41.218.98:80',
 };
 
 module.exports.getBlog = function (req, res) {
